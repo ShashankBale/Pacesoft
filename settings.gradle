@@ -1,0 +1,41 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+
+        jcenter()
+        maven { url "https://jitpack.io" }
+        maven {
+
+            name "aoneCustomerVirtual"
+            url "https://amadis.jfrog.io/artifactory/aone-pacesoft-virtual"
+            credentials {
+                username = "am@amadis.ca"
+                password = "!Amadis2022"
+            }
+        }
+
+        maven {
+            url "https://jitpack.io"
+            credentials { username authTokenPacesoft }
+        }
+
+        flatDir {
+            dirs 'pacesoftsdk/libs'
+        }
+    }
+}
+
+
+rootProject.name = "Pacesoft Sample"
+include ':app'
+include ':xcode'
+include ':pacesoftsdk'

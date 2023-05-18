@@ -1,0 +1,111 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    id "kotlin-kapt"
+    id "kotlin-android-extensions"
+}
+
+android {
+    namespace 'com.sample.pacesoft'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.sample.pacesoft"
+        minSdk 29
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        flavorDimensions 'PacesoftDemo'
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+
+    buildToolsVersion "30.0.3"
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    //versionName : Max.Min.Change.Date(yymmdd).Stage
+    productFlavors {
+        amadis {
+            dimension "PacesoftDemo"
+            buildConfigField "String", "buildVar", "\"amadis\""
+        }
+
+        ingenico {
+            dimension "PacesoftDemo"
+            buildConfigField "String", "buildVar", "\"ingenico\""
+        }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    kapt {
+        generateStubs = true
+    }
+
+    androidExtensions {
+        experimental = true
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
+
+    packagingOptions {
+        resources {
+            excludes += ['META-INF/atomicfu.kotlin_module', 'META-INF/viewpump_release.kotlin_module']
+        }
+
+        pickFirst 'google/protobuf/*'
+    }
+
+    lint {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+
+    implementation project(':xcode')
+    implementation project(':pacesoftsdk')
+    //implementation 'com.github.SBale-Pace:PacesoftAndroidSample:0.0.1'
+
+    //implementation 'com.github.ShashankBale.Chuck:lib-chuck-debug:0.0.2'
+
+    def agnosVersion = '3.5.12'
+
+    debugImplementation("ca.amadis.agnos:agnos-pacesoft-sred-debug:${agnosVersion}") {
+        exclude group: 'androidx.core', module: 'core'
+        exclude group: 'androidx.core', module: 'core-ktx'
+        exclude group: 'androidx.localbroadcastmanager', module: 'localbroadcastmanager'
+        exclude group: 'androidx.annotation', module: 'annotation-experimental'
+    }
+    releaseImplementation("ca.amadis.agnos:agnos-pacesoft-sred-release:${agnosVersion}") {
+        exclude group: 'androidx.core', module: 'core'
+        exclude group: 'androidx.core', module: 'core-ktx'
+        exclude group: 'androidx.localbroadcastmanager', module: 'localbroadcastmanager'
+        exclude group: 'androidx.annotation', module: 'annotation-experimental'
+    }
+}

@@ -1,0 +1,1422 @@
+/*****************************************************************
+|
+|   Secure Key Box API
+|
+|   $Id: SkbSecureKeyBox.h 18985 2022-12-29 13:38:40Z kristaps.straupe $
+|   Original author:  Gilles Boccon-Gibod
+|
+|   This software is provided to you pursuant to your agreement
+|   with Intertrust Technologies Corporation ("Intertrust").
+|   This software may be used only in accordance with the terms
+|   of the agreement.
+|
+|   Copyright (c) 2005-2023, Intertrust Technologies Corporation. All rights reserved.
+|
+****************************************************************/
+
+#ifndef SKB_AscX9Tr31WrapParameters
+    #define SKB_AscX9Tr31WrapParameters l6b5daaa187ae5c18af3165f367c5372f3cb156b436055ce2
+#endif
+#ifndef SKB_AuthenticationParameters
+    #define SKB_AuthenticationParameters l8e17418c3165ec896648e73e5ea75f57cc73be48177df1a1
+#endif
+#ifndef SKB_BlockCipherUnwrapParameters
+    #define SKB_BlockCipherUnwrapParameters l612bbcbd60b5ddc017fccda0227e48e9553f818ec45a8c65
+#endif
+#ifndef SKB_BlockCipherWrapParameters
+    #define SKB_BlockCipherWrapParameters l38383f3d173cc787f42285efafb3482ef486fe8d921ff1aa
+#endif
+#ifndef SKB_Byte
+    #define SKB_Byte l5b64b69185ec3de22a96ba7236cd3eb14edaf4dd6dd0b5d4
+#endif
+#ifndef SKB_CIPHER_ALGORITHM_AES_128_CBC
+    #define SKB_CIPHER_ALGORITHM_AES_128_CBC l33cfc5b9b580503a4aa9edf3054c07878a2ab735d7571acf
+#endif
+#ifndef SKB_CIPHER_ALGORITHM_AES_128_CCM
+    #define SKB_CIPHER_ALGORITHM_AES_128_CCM lea40ad3fea9538c44af673ece08c3b1d8ba42c57304e2051
+#endif
+#ifndef SKB_CIPHER_ALGORITHM_AES_128_CTR
+    #define SKB_CIPHER_ALGORITHM_AES_128_CTR l17bb4f268f60ec87951615e4882754ecd73051a60cc24885
+#endif
+#ifndef SKB_CIPHER_ALGORITHM_AES_128_ECB
+    #define SKB_CIPHER_ALGORITHM_AES_128_ECB lc5c53c35124c0cca033924027a8186a57189e3b4a8a0683f
+#endif
+#ifndef SKB_CIPHER_ALGORITHM_AES_128_GCM
+    #define SKB_CIPHER_ALGORITHM_AES_128_GCM laeac5485069e9dddbcb6313e632345cb0b0833e8d82846c5
+#endif
+#ifndef SKB_CIPHER_ALGORITHM_AES_192_CBC
+    #define SKB_CIPHER_ALGORITHM_AES_192_CBC l282bafcb59f306d4bbebbbcf57403cdc70eb6fe06723c5d7
+#endif
+#ifndef SKB_CIPHER_ALGORITHM_AES_192_CCM
+    #define SKB_CIPHER_ALGORITHM_AES_192_CCM lb0f9052a6b8f9870071841f5920ff5dfc0e3620280349ef6
+#endif
+#ifndef SKB_CIPHER_ALGORITHM_AES_192_CTR
+    #define SKB_CIPHER_ALGORITHM_AES_192_CTR l29898b1626274028df9c8fccbe60583b0d94387d39cfe31e
+#endif
+#ifndef SKB_CIPHER_ALGORITHM_AES_192_ECB
+    #define SKB_CIPHER_ALGORITHM_AES_192_ECB l857e89f77ece52c5d5ea221527ce4071e7e5ccfe30c4a11b
+#endif
+#ifndef SKB_CIPHER_ALGORITHM_AES_192_GCM
+    #define SKB_CIPHER_ALGORITHM_AES_192_GCM lc3e8dcfc1d6464491da56b9048997bca127e747808ff6284
+#endif
+#ifndef SKB_CIPHER_ALGORITHM_AES_256_CBC
+    #define SKB_CIPHER_ALGORITHM_AES_256_CBC lb015b041b888f04aae09c7ed19ad547d19b239c1c208a1f3
+#endif
+#ifndef SKB_CIPHER_ALGORITHM_AES_256_CCM
+    #define SKB_CIPHER_ALGORITHM_AES_256_CCM l612a9255eb897706f05323a165f7307b82e91c65f02f786d
+#endif
+#ifndef SKB_CIPHER_ALGORITHM_AES_256_CTR
+    #define SKB_CIPHER_ALGORITHM_AES_256_CTR l5855d25470fca7336bd025042acb0deab9ae97a099a5e7ed
+#endif
+#ifndef SKB_CIPHER_ALGORITHM_AES_256_ECB
+    #define SKB_CIPHER_ALGORITHM_AES_256_ECB ld53c2b790cb39f0321a04b4a8aa4bd5e4bed9ae0c3d70592
+#endif
+#ifndef SKB_CIPHER_ALGORITHM_AES_256_GCM
+    #define SKB_CIPHER_ALGORITHM_AES_256_GCM l203446968c04d61aaac1a09a078082bac53ee9470b82cdeb
+#endif
+#ifndef SKB_CIPHER_ALGORITHM_ASC_X9_TR_31
+    #define SKB_CIPHER_ALGORITHM_ASC_X9_TR_31 lf2e61ae862168d3f1e3f4ddc8f872e21f78af4d4cd60218b
+#endif
+#ifndef SKB_CIPHER_ALGORITHM_DES_CBC
+    #define SKB_CIPHER_ALGORITHM_DES_CBC l6af1ad8ba37599f4c33b21430e03bb83eb8853fab686bf6b
+#endif
+#ifndef SKB_CIPHER_ALGORITHM_DES_ECB
+    #define SKB_CIPHER_ALGORITHM_DES_ECB lb3498fb53ef40b107dc2849ae0368710e03efdc2d40fc6fc
+#endif
+#ifndef SKB_CIPHER_ALGORITHM_ECC_ELGAMAL
+    #define SKB_CIPHER_ALGORITHM_ECC_ELGAMAL l8044aef87ed12110b359f0ee2521fc1315196ec272cefed4
+#endif
+#ifndef SKB_CIPHER_ALGORITHM_FORCE_32
+    #define SKB_CIPHER_ALGORITHM_FORCE_32 l14238939c7fef9c4fc1a9ac8a76f052fe3afa789c7ea38f3
+#endif
+#ifndef SKB_CIPHER_ALGORITHM_NIST_AES
+    #define SKB_CIPHER_ALGORITHM_NIST_AES l417157b3b08a9705842f144dfc312f0de85cc4d555472d88
+#endif
+#ifndef SKB_CIPHER_ALGORITHM_NULL
+    #define SKB_CIPHER_ALGORITHM_NULL l2d3c2eac943d87da375a11e840c4e92cd1ea52e7840c3902
+#endif
+#ifndef SKB_CIPHER_ALGORITHM_RSA
+    #define SKB_CIPHER_ALGORITHM_RSA l473ece94886f7599b386a6cda3b07b2bb8fb98cd089122a9
+#endif
+#ifndef SKB_CIPHER_ALGORITHM_RSA_1_5
+    #define SKB_CIPHER_ALGORITHM_RSA_1_5 l6e30f19f8e23ad32bf5c9815d61da0e62c4602dc0552af2c
+#endif
+#ifndef SKB_CIPHER_ALGORITHM_RSA_OAEP
+    #define SKB_CIPHER_ALGORITHM_RSA_OAEP l69eea29745650df74a87749acbbf425cbc356a5f7c3c9f93
+#endif
+#ifndef SKB_CIPHER_ALGORITHM_RSA_OAEP_MD5
+    #define SKB_CIPHER_ALGORITHM_RSA_OAEP_MD5 lcfcaffc98adec9189fcfe4ce88f02e44c4d4e5de43d08600
+#endif
+#ifndef SKB_CIPHER_ALGORITHM_RSA_OAEP_SHA224
+    #define SKB_CIPHER_ALGORITHM_RSA_OAEP_SHA224 l73ffaf1db27c6ff08e7493542dce236926bc7168956c31e0
+#endif
+#ifndef SKB_CIPHER_ALGORITHM_RSA_OAEP_SHA256
+    #define SKB_CIPHER_ALGORITHM_RSA_OAEP_SHA256 l39bdc98e7406d8b88561cfedd211308f4675f9e71b9a9854
+#endif
+#ifndef SKB_CIPHER_ALGORITHM_RSA_OAEP_SHA384
+    #define SKB_CIPHER_ALGORITHM_RSA_OAEP_SHA384 l2d22fd42a2e3dd221c2dec1c82070a926c468f0cbf06e24f
+#endif
+#ifndef SKB_CIPHER_ALGORITHM_RSA_OAEP_SHA512
+    #define SKB_CIPHER_ALGORITHM_RSA_OAEP_SHA512 lc09d95305b655b4e1356668476146052b909fdf79acfa0dc
+#endif
+#ifndef SKB_CIPHER_ALGORITHM_SPECK_64_128_CBC
+    #define SKB_CIPHER_ALGORITHM_SPECK_64_128_CBC laa8bbd93c9136f82687225a8d7612c20f00165616e593c2e
+#endif
+#ifndef SKB_CIPHER_ALGORITHM_SPECK_64_128_CTR
+    #define SKB_CIPHER_ALGORITHM_SPECK_64_128_CTR lbb205b3b992f46c1e97c607b1e34b6d468392ab3ba0d60a6
+#endif
+#ifndef SKB_CIPHER_ALGORITHM_SPECK_64_128_ECB
+    #define SKB_CIPHER_ALGORITHM_SPECK_64_128_ECB l2c6d4783f709a164693ad58d5452465b1d2a0df841cba583
+#endif
+#ifndef SKB_CIPHER_ALGORITHM_TRIPLE_DES_CBC
+    #define SKB_CIPHER_ALGORITHM_TRIPLE_DES_CBC lf86f0300b4913bb05b7d0f9281b12333c55e9cbe1aeb838a
+#endif
+#ifndef SKB_CIPHER_ALGORITHM_TRIPLE_DES_ECB
+    #define SKB_CIPHER_ALGORITHM_TRIPLE_DES_ECB le4d829ccdb4e6261d17b245a38e8fe30512d634ca2474872
+#endif
+#ifndef SKB_CIPHER_ALGORITHM_XOR
+    #define SKB_CIPHER_ALGORITHM_XOR l8531ded3f7efc47230782b6f8171dc36b584c45d886648ad
+#endif
+#ifndef SKB_CIPHER_DIRECTION_DECRYPT
+    #define SKB_CIPHER_DIRECTION_DECRYPT lf4c3fca1090aed72e8985d38dc88b6270da9b9e77d5e2875
+#endif
+#ifndef SKB_CIPHER_DIRECTION_ENCRYPT
+    #define SKB_CIPHER_DIRECTION_ENCRYPT l19161f047f79e92d4c384b11eccf7939355f8bb58717611a
+#endif
+#ifndef SKB_CIPHER_DIRECTION_FORCE_32
+    #define SKB_CIPHER_DIRECTION_FORCE_32 l627911783d87944e2804f6053fdd56567ba54dbe761a2d7f
+#endif
+#ifndef SKB_Cipher
+    #define SKB_Cipher l1d600b88beb830e9bc65e6fbc919cb202963deaa83f73d71
+#endif
+#ifndef SKB_CipherAlgorithm
+    #define SKB_CipherAlgorithm l9a9f3bbb03773fd32e0c6546c191409de039ef649b119b14
+#endif
+#ifndef SKB_CipherDerivationParameters
+    #define SKB_CipherDerivationParameters l9f943e32ed5066c918d5bf6292d7c4b2e3b8206366780835
+#endif
+#ifndef SKB_CipherDirection
+    #define SKB_CipherDirection le41c6794c5a7ccf737552421bca8cb625c189921cf4d9301
+#endif
+#ifndef SKB_Cipher_ProcessAad
+    #define SKB_Cipher_ProcessAad lbff77f1b1886b7e814b238cfa5be7df919b8a761e50ee02e
+#endif
+#ifndef SKB_Cipher_ProcessBuffer
+    #define SKB_Cipher_ProcessBuffer l816f24c00ab408b34d37576bbab1d1afe0dee3fe4b1c59f7
+#endif
+#ifndef SKB_Cipher_ProcessFinal
+    #define SKB_Cipher_ProcessFinal lcbf205c62ce3f36aab240eab63d93f0c128b4266f7a97ab1
+#endif
+#ifndef SKB_Cipher_Release
+    #define SKB_Cipher_Release l59b1915378e80e27cfb37cc3e3d38e6fdeab20d763f0ee41
+#endif
+#ifndef SKB_CtrModeCipherParameters
+    #define SKB_CtrModeCipherParameters lf95b332032d99cb80f77e0ed6314f9eb220a8fa5e0cfc359
+#endif
+#ifndef SKB_DATA_FORMAT_CRT
+    #define SKB_DATA_FORMAT_CRT ld3cfc44d042fef1c5f8211de714e0658c5cfd4a3910aa4f7
+#endif
+#ifndef SKB_DATA_FORMAT_CRT_EQUAL_LEN
+    #define SKB_DATA_FORMAT_CRT_EQUAL_LEN l0973d47495cbd9fdb29fa2541bf70b78f3421954ce257ce6
+#endif
+#ifndef SKB_DATA_FORMAT_ECC_BINARY
+    #define SKB_DATA_FORMAT_ECC_BINARY l36c63cca362727eda139996654ac7cc5e6feed424a69220c
+#endif
+#ifndef SKB_DATA_FORMAT_ECC_PRIVATE
+    #define SKB_DATA_FORMAT_ECC_PRIVATE l4122dad68766ad9f4a50027b187b3d5a9110f37dbff59acb
+#endif
+#ifndef SKB_DATA_FORMAT_ECC_PUBLIC
+    #define SKB_DATA_FORMAT_ECC_PUBLIC l096abdc907c18aec63fc71541dd2bd45e4220a4c2e2f81cb
+#endif
+#ifndef SKB_DATA_FORMAT_ECC_PUBLIC_POINT
+    #define SKB_DATA_FORMAT_ECC_PUBLIC_POINT l4eb4ed685d798fc93eecb9a8b8acef1e1be7838cbe93be17
+#endif
+#ifndef SKB_DATA_FORMAT_ECC_PUBLIC_X9_62
+    #define SKB_DATA_FORMAT_ECC_PUBLIC_X9_62 lfcca66d6fb0eb5a1c5ae3dcd8556a7d929b2e49bb2ed4db7
+#endif
+#ifndef SKB_DATA_FORMAT_FORCE_32
+    #define SKB_DATA_FORMAT_FORCE_32 lbfab180e0d1879f7efaa829603cf2bff32277302ee2a736c
+#endif
+#ifndef SKB_DATA_FORMAT_JSON
+    #define SKB_DATA_FORMAT_JSON l409f955a66fe0f039fcaa104c38f2ebf6b016e863f84c19d
+#endif
+#ifndef SKB_DATA_FORMAT_PKCS1
+    #define SKB_DATA_FORMAT_PKCS1 l969927cd1232b702582ccc11c9d37726c810559dd0121c49
+#endif
+#ifndef SKB_DATA_FORMAT_PKCS8
+    #define SKB_DATA_FORMAT_PKCS8 lba76a1e01d9925d54274eec5d6232ca6d14f8773008c0cbc
+#endif
+#ifndef SKB_DATA_FORMAT_RAW
+    #define SKB_DATA_FORMAT_RAW l83fde78b9153193627486e00ab347908a5cb33127d5d4309
+#endif
+#ifndef SKB_DATA_TYPE_BYTES
+    #define SKB_DATA_TYPE_BYTES l87e0f1772999c6e13b645d42a8fa552af60d35bacd69f502
+#endif
+#ifndef SKB_DATA_TYPE_DSA_PRIVATE_KEY
+    #define SKB_DATA_TYPE_DSA_PRIVATE_KEY l63540ed49a75c6140d5cf5e38e9d86b06ba0e56ae48f357b
+#endif
+#ifndef SKB_DATA_TYPE_ECC_PRIVATE_KEY
+    #define SKB_DATA_TYPE_ECC_PRIVATE_KEY lf007f6dc81519bd355054258d7dd40edcc72009c08169735
+#endif
+#ifndef SKB_DATA_TYPE_FORCE_32
+    #define SKB_DATA_TYPE_FORCE_32 l38e75ad97cdd44e1c87255d39e333e183c076a3dde9fcd20
+#endif
+#ifndef SKB_DATA_TYPE_RSA_PRIVATE_KEY
+    #define SKB_DATA_TYPE_RSA_PRIVATE_KEY l6a545e7032a4fdeeea5db1c0b5ee8a488669b7ae4ff53327
+#endif
+#ifndef SKB_DATA_TYPE_RSA_PUBLIC_KEY_CONTEXT
+    #define SKB_DATA_TYPE_RSA_PUBLIC_KEY_CONTEXT ldad363a44c09dbe807aca3a3163a1c028dec0489f94940b7
+#endif
+#ifndef SKB_DATA_TYPE_RSA_STATIC_SIGN_CONTEXT
+    #define SKB_DATA_TYPE_RSA_STATIC_SIGN_CONTEXT l90cd6c4d750aae8cc2330187eb7df8b7826a73a87e7c2e71
+#endif
+#ifndef SKB_DATA_TYPE_RSA_STATIC_UNWRAP_CONTEXT
+    #define SKB_DATA_TYPE_RSA_STATIC_UNWRAP_CONTEXT l9eb0e9a9f108635ad024d96f2077d248665d107d5b24966d
+#endif
+#ifndef SKB_DATA_TYPE_UNWRAP_BYTES
+    #define SKB_DATA_TYPE_UNWRAP_BYTES l265add886601d188c570eb28331a72c0d9e8a80626dd75b8
+#endif
+#ifndef SKB_DERIVATION_ALGORITHM_AES_PLAIN_KEY_DECRYPT
+    #define SKB_DERIVATION_ALGORITHM_AES_PLAIN_KEY_DECRYPT l1d456c2e23a1cb819a085097b0a52f4e6eca09c6700f8c47
+#endif
+#ifndef SKB_DERIVATION_ALGORITHM_BLOCK_CONCATENATE
+    #define SKB_DERIVATION_ALGORITHM_BLOCK_CONCATENATE lf244c19f3065016577bce962feb4b63b2a3a12f90ba8494a
+#endif
+#ifndef SKB_DERIVATION_ALGORITHM_BLOCK_SLICE
+    #define SKB_DERIVATION_ALGORITHM_BLOCK_SLICE l6121340e3bd6671ed8c8795260eb7201934d60e6c29bcec9
+#endif
+#ifndef SKB_DERIVATION_ALGORITHM_CIPHER
+    #define SKB_DERIVATION_ALGORITHM_CIPHER lcb0483597f4b5269d7c42bbff174a5915afa438a82ca6fdc
+#endif
+#ifndef SKB_DERIVATION_ALGORITHM_DOUBLE_AES_ENCRYPT
+    #define SKB_DERIVATION_ALGORITHM_DOUBLE_AES_ENCRYPT lb951e5fc854d03c43ddc23eaa8ca7b55d1e91db9d7b61c2c
+#endif
+#ifndef SKB_DERIVATION_ALGORITHM_FORCE_32
+    #define SKB_DERIVATION_ALGORITHM_FORCE_32 l94796ddabc222fa116c4a87da5ae0ba30597c993ecc101e7
+#endif
+#ifndef SKB_DERIVATION_ALGORITHM_GET_RESTRICTED_USAGE_KEY
+    #define SKB_DERIVATION_ALGORITHM_GET_RESTRICTED_USAGE_KEY l287962cf48a361531995a040b9d08f8c27da10c14c69a5a0
+#endif
+#ifndef SKB_DERIVATION_ALGORITHM_HKDF_SHA256
+    #define SKB_DERIVATION_ALGORITHM_HKDF_SHA256 l97fe774b5b55fe38c33091f2619ecc6844f726719e84f323
+#endif
+#ifndef SKB_DERIVATION_ALGORITHM_HMAC_SHA256
+    #define SKB_DERIVATION_ALGORITHM_HMAC_SHA256 l4be8cf67cc4270c254cf0bdc677bcc3586cbed0ea9675273
+#endif
+#ifndef SKB_DERIVATION_ALGORITHM_HMAC_SHA384
+    #define SKB_DERIVATION_ALGORITHM_HMAC_SHA384 l10d5344ac3152cf45c03847d30b07455af8f67b02c0a9078
+#endif
+#ifndef SKB_DERIVATION_ALGORITHM_HMAC_SHA512
+    #define SKB_DERIVATION_ALGORITHM_HMAC_SHA512 led86ee843723ce3feaab52ff54883f7a9a2bb9a8f01918a7
+#endif
+#ifndef SKB_DERIVATION_ALGORITHM_MIX_WITH_PLAIN_A
+    #define SKB_DERIVATION_ALGORITHM_MIX_WITH_PLAIN_A l00f2f0145b1ba866f450d0761a0f6bc7ea395e9b6737239a
+#endif
+#ifndef SKB_DERIVATION_ALGORITHM_MIX_WITH_PLAIN_B
+    #define SKB_DERIVATION_ALGORITHM_MIX_WITH_PLAIN_B l9c2d840f3235c58d1ee64afb664e04b64a3d1a533472ae55
+#endif
+#ifndef SKB_DERIVATION_ALGORITHM_NIST_800_108_COUNTER_CMAC_AES128
+    #define SKB_DERIVATION_ALGORITHM_NIST_800_108_COUNTER_CMAC_AES128 l7aa83ac4227ca5455bc55c24de9509e71afa5c65fe9f88a8
+#endif
+#ifndef SKB_DERIVATION_ALGORITHM_NIST_800_108_COUNTER_CMAC_AES128_L16BIT
+    #define SKB_DERIVATION_ALGORITHM_NIST_800_108_COUNTER_CMAC_AES128_L16BIT lcf41fd15949f0771a25c6e6e6d5df1e28c7c66d7bd8a3b6d
+#endif
+#ifndef SKB_DERIVATION_ALGORITHM_NIST_800_108_COUNTER_CMAC_SPECK_L16BITLE
+    #define SKB_DERIVATION_ALGORITHM_NIST_800_108_COUNTER_CMAC_SPECK_L16BITLE l3523f6f1887f10ea85fc4bc13c6f1f7408d8b77148651f1f
+#endif
+#ifndef SKB_DERIVATION_ALGORITHM_OMA_DRM_KDF2
+    #define SKB_DERIVATION_ALGORITHM_OMA_DRM_KDF2 ld65e5c901693f00e3d1be57d15218c1d14557bfab2f3150c
+#endif
+#ifndef SKB_DERIVATION_ALGORITHM_RAW_BYTES_FROM_ECC_PRIVATE
+    #define SKB_DERIVATION_ALGORITHM_RAW_BYTES_FROM_ECC_PRIVATE lf049c13f2e5befbfeb5acddc860dbe71df2ed64f6f74f4ff
+#endif
+#ifndef SKB_DERIVATION_ALGORITHM_REVERSE_BYTES
+    #define SKB_DERIVATION_ALGORITHM_REVERSE_BYTES l0fe07f07ab53546e4d23d1e474c545e3ca2375ec73add0c8
+#endif
+#ifndef SKB_DERIVATION_ALGORITHM_SELECT_BYTES
+    #define SKB_DERIVATION_ALGORITHM_SELECT_BYTES l647eca8ae3102ab9c572d5caaf1bc668caded2ee3a3f2319
+#endif
+#ifndef SKB_DERIVATION_ALGORITHM_SHA_1
+    #define SKB_DERIVATION_ALGORITHM_SHA_1 l417320509b2d3bffcb37f06938442eb8f1a4aa530ae9e371
+#endif
+#ifndef SKB_DERIVATION_ALGORITHM_SHA_256
+    #define SKB_DERIVATION_ALGORITHM_SHA_256 lfe13d7f17801d2ac2e8f965eef604eaae018018c87724244
+#endif
+#ifndef SKB_DERIVATION_ALGORITHM_SHA_384
+    #define SKB_DERIVATION_ALGORITHM_SHA_384 lb7657c29b4ca54f401a0610d0ad699a720da9baf21f9a214
+#endif
+#ifndef SKB_DERIVATION_ALGORITHM_SHA_512
+    #define SKB_DERIVATION_ALGORITHM_SHA_512 lfee5cd5f513ad7e0d56a8c18d4201746d16e28b65da2adec
+#endif
+#ifndef SKB_DERIVATION_ALGORITHM_SHA_AES
+    #define SKB_DERIVATION_ALGORITHM_SHA_AES lf44c04710fbdfb9983b7860c405086ec17ab80650c67c7d2
+#endif
+#ifndef SKB_DERIVATION_ALGORITHM_SLICE
+    #define SKB_DERIVATION_ALGORITHM_SLICE lbee744580dbaa4443a03fa1b22dde55ec0d50f2bfc840759
+#endif
+#ifndef SKB_DERIVATION_ALGORITHM_XOR
+    #define SKB_DERIVATION_ALGORITHM_XOR l6e4a71e69c1e713a5c6ead408cc1f9f6caf267fe0f6d1dff
+#endif
+#ifndef SKB_DIGEST_ALGORITHM_FORCE_32
+    #define SKB_DIGEST_ALGORITHM_FORCE_32 l2f359b59515f3d9219d985cea7e7bbf4d1e8d4be226ad7ea
+#endif
+#ifndef SKB_DIGEST_ALGORITHM_MD5
+    #define SKB_DIGEST_ALGORITHM_MD5 l5f0bb56fc859911bfc5d07ed7fc9d18014a7123355f110eb
+#endif
+#ifndef SKB_DIGEST_ALGORITHM_SHA1
+    #define SKB_DIGEST_ALGORITHM_SHA1 l3f06c356b4b45facc073f728e919ffb37a9fb511b3071837
+#endif
+#ifndef SKB_DIGEST_ALGORITHM_SHA224
+    #define SKB_DIGEST_ALGORITHM_SHA224 l850097d1df6c3607416ebc107651fbdf1b62a930ff0f5043
+#endif
+#ifndef SKB_DIGEST_ALGORITHM_SHA256
+    #define SKB_DIGEST_ALGORITHM_SHA256 l9feb59a718e7a0a24eb443e31e49002fd247025ec6995e84
+#endif
+#ifndef SKB_DIGEST_ALGORITHM_SHA384
+    #define SKB_DIGEST_ALGORITHM_SHA384 le2ecf8d4d8019c815729b784b323fdee4a2b93226ebf9485
+#endif
+#ifndef SKB_DIGEST_ALGORITHM_SHA512
+    #define SKB_DIGEST_ALGORITHM_SHA512 l92ebd451a645575bef9b106aa50e8236d494f95514b4c917
+#endif
+#ifndef SKB_DataFormat
+    #define SKB_DataFormat lfd27299a52ae4dc8fd08756cb020b46ca22983de49e585ae
+#endif
+#ifndef SKB_DataInfo
+    #define SKB_DataInfo led601509472000b137f772980fd873ac0b1697cfe9e01a60
+#endif
+#ifndef SKB_DataType
+    #define SKB_DataType l38eab32d1b9e5691febce38d995faea46411adff4fa1a05e
+#endif
+#ifndef SKB_DerivationAlgorithm
+    #define SKB_DerivationAlgorithm l14198bfbc2657dfaed4d667e3e80564d3259958babd50434
+#endif
+#ifndef SKB_DigestAlgorithm
+    #define SKB_DigestAlgorithm lafc67ff28229c46f195f95bd7365642d4b44c9babb7b0f78
+#endif
+#ifndef SKB_DigestTransformParameters
+    #define SKB_DigestTransformParameters lc2b97199b7f4d45d1343c4e31c7244e7588434ef995cf214
+#endif
+#ifndef SKB_DsaParameters
+    #define SKB_DsaParameters l79e1bef89e229f11a322c3c6c4dd18701352a1e1cdbd6441
+#endif
+#ifndef SKB_ECC_CURVE_CUSTOM
+    #define SKB_ECC_CURVE_CUSTOM l1914dbd4fb2eab6f73f067266427a63948af61ec699b04f0
+#endif
+#ifndef SKB_ECC_CURVE_FORCE_32
+    #define SKB_ECC_CURVE_FORCE_32 lb159b205aaa1d2bb0f108a5aff9b83cea6cd06f82026ea9f
+#endif
+#ifndef SKB_ECC_CURVE_NIST_192
+    #define SKB_ECC_CURVE_NIST_192 l7e4f5f155927be31818f6930e15e9732bc0906beea2a473b
+#endif
+#ifndef SKB_ECC_CURVE_NIST_224
+    #define SKB_ECC_CURVE_NIST_224 lc591acde12e39a442df49ad035c51683413202b627ee1bda
+#endif
+#ifndef SKB_ECC_CURVE_NIST_256
+    #define SKB_ECC_CURVE_NIST_256 l5d732fd69d6e24c8dddb5c5aa25ad20de232a80842ede993
+#endif
+#ifndef SKB_ECC_CURVE_NIST_384
+    #define SKB_ECC_CURVE_NIST_384 lea12fa77b94b35eec47f37bd37157b4d4cb92e9f5da6d5bc
+#endif
+#ifndef SKB_ECC_CURVE_NIST_521
+    #define SKB_ECC_CURVE_NIST_521 l55bf1293840a470c598c3247885b761a707d4c43d26c748f
+#endif
+#ifndef SKB_ECC_CURVE_SECP_R1_160
+    #define SKB_ECC_CURVE_SECP_R1_160 l0302a170041392f3e4155e791ad37316e11376334890d6fb
+#endif
+#ifndef SKB_EXPORT_TARGET_CLEARTEXT
+    #define SKB_EXPORT_TARGET_CLEARTEXT l1193d794ec0d2a4ce5f4fb6197fc1eb3234baf7acdb4a0ee
+#endif
+#ifndef SKB_EXPORT_TARGET_CROSS_ENGINE
+    #define SKB_EXPORT_TARGET_CROSS_ENGINE l937a7e6b8819a8030934277d086c3ead6a669528717141f8
+#endif
+#ifndef SKB_EXPORT_TARGET_CUSTOM
+    #define SKB_EXPORT_TARGET_CUSTOM l373630949f93aebe8f28c782937749874e6b5c71df9b8532
+#endif
+#ifndef SKB_EXPORT_TARGET_FORCE_32
+    #define SKB_EXPORT_TARGET_FORCE_32 l1e39ea1f19a788ddf98e7da007636cb7497e0169e6e34281
+#endif
+#ifndef SKB_EXPORT_TARGET_PERSISTENT
+    #define SKB_EXPORT_TARGET_PERSISTENT l90294a14780d4bcef07349bd508986b1144796ead7a602d3
+#endif
+#ifndef SKB_EccCurve
+    #define SKB_EccCurve l03caa157f160b3a8d18cbc236e27beb7daad246c7ae2641e
+#endif
+#ifndef SKB_EccCurveParameters
+    #define SKB_EccCurveParameters l28d971f57990ab402d65afbddf20059a34d6da8814aacb02
+#endif
+#ifndef SKB_EccParameters
+    #define SKB_EccParameters lbba56a08f6f2716d8ee8d8223a9f83c7fe9743266cc4deae
+#endif
+#ifndef SKB_EcdhParameters
+    #define SKB_EcdhParameters lac580f3087470e9e6401ddb3f97bfa161ad6760b60dcffa6
+#endif
+#ifndef SKB_EddhParameters
+    #define SKB_EddhParameters la46571aea7b1649a6bb144a5d64fcddd28c465a5d9d2c1cc
+#endif
+#ifndef SKB_Engine
+    #define SKB_Engine l350d26f391b037d88e50bfcd33bb13404a551ba84b6eb30e
+#endif
+#ifndef SKB_EngineInfo
+    #define SKB_EngineInfo lcaeb7693fa6598d129e35fde78d0f465aa631d9965f87072
+#endif
+#ifndef SKB_EngineProperty
+    #define SKB_EngineProperty l63898e3f4df9e967b921f66c770f4540c9e8654629c4902c
+#endif
+#ifndef SKB_Engine_CreateCipher
+    #define SKB_Engine_CreateCipher l62e0d15915a92207f72b88538b3541177371d1f687b48c51
+#endif
+#ifndef SKB_Engine_CreateDataFromExported
+    #define SKB_Engine_CreateDataFromExported lbf99313d5422c9f2823c707490c441c61bc4ded9a76eddf9
+#endif
+#ifndef SKB_Engine_CreateDataFromWrapped
+    #define SKB_Engine_CreateDataFromWrapped le8ace2d3f1adf7d862ff57dab01509f94a062e0de2e89563
+#endif
+#ifndef SKB_Engine_CreateKeyAgreement
+    #define SKB_Engine_CreateKeyAgreement l1eb723f94b7374b88b592c84d95f58e21f8cd000b0bdac1c
+#endif
+#ifndef SKB_Engine_CreateTransform
+    #define SKB_Engine_CreateTransform l1cf99191461cce9dc172857159179e539932940256410e0a
+#endif
+#ifndef SKB_Engine_GenerateSecureData
+    #define SKB_Engine_GenerateSecureData l2c3a42cfeb8da9a6fb5ca040b06904c255f6e910a9b44cb7
+#endif
+#ifndef SKB_Engine_GetDataByName
+    #define SKB_Engine_GetDataByName l10189c1bf55ec785bdf4352b6e239fb1e8563db0c404c742
+#endif
+#ifndef SKB_Engine_GetInfo
+    #define SKB_Engine_GetInfo l9e5810f862ae56d39c08f102263cfd3cf49fcc6a6c3d18dc
+#endif
+#ifndef SKB_Engine_GetInstance
+    #define SKB_Engine_GetInstance l91bff902e5aa85be25bc35c49f4f5401affa7c934900ee04
+#endif
+#ifndef SKB_Engine_Release
+    #define SKB_Engine_Release lc384e0795c58f3668351f26c3347e6b9493447f5de4f1579
+#endif
+#ifndef SKB_Engine_SetDeviceId
+    #define SKB_Engine_SetDeviceId lbd258fe7a7a441e99a8a194a234b1877cb0bc9b2ecf2c027
+#endif
+#ifndef SKB_Engine_UpgradeExportedData
+    #define SKB_Engine_UpgradeExportedData l45fcddb6ca1617924894cd6c914a3328d3fc2bd86ed2b857
+#endif
+#ifndef SKB_Engine_WrapDataFromPlain
+    #define SKB_Engine_WrapDataFromPlain le2e4aafaec214acb8e4683f4bcc090013d5fa0a11d479045
+#endif
+#ifndef SKB_ExportCustomParameters
+    #define SKB_ExportCustomParameters lde867d1239b045063b23f33d926d5f78bb03d88444c38335
+#endif
+#ifndef SKB_ExportTarget
+    #define SKB_ExportTarget l46dfeeb823e7c72634cd0142fc095e236fc1e25e78be1e44
+#endif
+#ifndef SKB_GcmCipherParameters
+    #define SKB_GcmCipherParameters l2e6a576da0bf75bc4aaa4a2d0361662aeb2607cac7a106df
+#endif
+#ifndef SKB_GcmUnwrapParameters
+    #define SKB_GcmUnwrapParameters l7244239d0cf7611d3b126f63b93ac863006db98f4001be03
+#endif
+#ifndef SKB_GenericDerivationParameters
+    #define SKB_GenericDerivationParameters le59fe5179a2f49cc426138ba80dea8638a6fa307f9b7f4d2
+#endif
+#ifndef SKB_HkdfDerivationParameters
+    #define SKB_HkdfDerivationParameters ldca9056b0fafe0e0768f89aac51f1da20ae7d055698d2d24
+#endif
+#ifndef SKB_KEY_AGREEMENT_ALGORITHM_ECDH
+    #define SKB_KEY_AGREEMENT_ALGORITHM_ECDH l99458bf568a797ad2799785230d224963491249e4fe8ec9e
+#endif
+#ifndef SKB_KEY_AGREEMENT_ALGORITHM_ECDH_STATIC
+    #define SKB_KEY_AGREEMENT_ALGORITHM_ECDH_STATIC lc30bcb398bea82c55845596f050d069e5ea23885a3178db8
+#endif
+#ifndef SKB_KEY_AGREEMENT_ALGORITHM_FORCE_32
+    #define SKB_KEY_AGREEMENT_ALGORITHM_FORCE_32 l9ad9e688e8c82f08fbaa2a34c9535df98077251044db59b0
+#endif
+#ifndef SKB_KEY_AGREEMENT_ALGORITHM_PRIME_DH
+    #define SKB_KEY_AGREEMENT_ALGORITHM_PRIME_DH l77312ef198525c0ab55ae7a4ec5b1fd0dd6f44113074cd25
+#endif
+#ifndef SKB_KEY_AGREEMENT_ALGORITHM_X25519
+    #define SKB_KEY_AGREEMENT_ALGORITHM_X25519 l84cb009d6de8ab395b4c7ee6aa9ebbd7678b21a2295737d3
+#endif
+#ifndef SKB_KeyAgreement
+    #define SKB_KeyAgreement ld1b565932659bc5f658eb0f093c95ac5bc76db1446fde10b
+#endif
+#ifndef SKB_KeyAgreementAlgorithm
+    #define SKB_KeyAgreementAlgorithm lea955417d8fe591e482ac447507995d320071f911edc17a0
+#endif
+#ifndef SKB_KeyAgreement_ComputeSecret
+    #define SKB_KeyAgreement_ComputeSecret l6a1de9f32ca225c90beb750bd8dcdc1f835c5a13f4350ada
+#endif
+#ifndef SKB_KeyAgreement_GetPublicKey
+    #define SKB_KeyAgreement_GetPublicKey l7cc7d97b830e065f8ed5c67fbd6383c95194e87f5654687d
+#endif
+#ifndef SKB_KeyAgreement_Release
+    #define SKB_KeyAgreement_Release le7824f9e60a35442b6474bee549d52e29f79964fc23dc161
+#endif
+#ifndef SKB_Nist800108CounterCmacAes128Parameters
+    #define SKB_Nist800108CounterCmacAes128Parameters lc67e239099b7ef7fd1810aa3cdf232c791a51cd649c2ca02
+#endif
+#ifndef SKB_Nist800108KdfDerivationParameters
+    #define SKB_Nist800108KdfDerivationParameters l2857d5263049f45f6d71f3679f1e647d70e726b101228ae8
+#endif
+#ifndef SKB_OmaDrmKdf2DerivationParameters
+    #define SKB_OmaDrmKdf2DerivationParameters lb8fa0b8526c56239808fb534c9822626be95028ba1cfd825
+#endif
+#ifndef SKB_PADDING_TYPE_FORCE_32
+    #define SKB_PADDING_TYPE_FORCE_32 l8e23917d5a536fbced73c6cc68c3a9344b796855a7a97c00
+#endif
+#ifndef SKB_PADDING_TYPE_NONE
+    #define SKB_PADDING_TYPE_NONE l0ad1376e3a2f148486469439718a4bf9f3632d591c567c4f
+#endif
+#ifndef SKB_PADDING_TYPE_XMLENC
+    #define SKB_PADDING_TYPE_XMLENC l2695f43a3b0eda1831f6d365babfeee8a0ef91085b87c6db
+#endif
+#ifndef SKB_PaddingType
+    #define SKB_PaddingType l36d675544a1c32fd223fcc053529cdf10d20c5652fdb1dbe
+#endif
+#ifndef SKB_PrimeDhParameters
+    #define SKB_PrimeDhParameters lf430640b0a19ba10a9014ebece7c0f0ab09a3661df287678
+#endif
+#ifndef SKB_RawBytesFromEccPrivateDerivationParameters
+    #define SKB_RawBytesFromEccPrivateDerivationParameters lbeaa39b85cb934529b67a65a9b4077edafe413d1e1999db6
+#endif
+#ifndef SKB_RawBytesParameters
+    #define SKB_RawBytesParameters lddd8844d218a879e9b4adc390edb2888a3d793a47311a4a5
+#endif
+#ifndef SKB_Result
+    #define SKB_Result l769cdd4d75a535dc4ec65180e1c1de0d5ff65f5a41786f30
+#endif
+#ifndef SKB_RsaParameters
+    #define SKB_RsaParameters ld1fb37b35edcab53d1308d989cad9bc4b57ccdd643cb3ee1
+#endif
+#ifndef SKB_RsaPssParameters
+    #define SKB_RsaPssParameters lbab2a076fd59937e42e816e2474940d3ebd5f216392c021f
+#endif
+#ifndef SKB_SECURE_KEY_BOX_H_
+    #define SKB_SECURE_KEY_BOX_H_ lf3f0a74143ca3e51fd5893fa5c7a728403b4a0457af0cee7
+#endif
+#ifndef SKB_SELECT_BYTES_DERIVATION_EVEN_BYTES
+    #define SKB_SELECT_BYTES_DERIVATION_EVEN_BYTES lba20bc698fb937fe73b683d29f89bd0402d126bb65779d52
+#endif
+#ifndef SKB_SELECT_BYTES_DERIVATION_FORCE_32
+    #define SKB_SELECT_BYTES_DERIVATION_FORCE_32 l2901502ae632c8bd96a3875b318b6a75a2e674c57ecd011c
+#endif
+#ifndef SKB_SELECT_BYTES_DERIVATION_ODD_BYTES
+    #define SKB_SELECT_BYTES_DERIVATION_ODD_BYTES l44572758080138fe87e07ef0cd4228aa1acb0118e746b58a
+#endif
+#ifndef SKB_SIGNATURE_ALGORITHM_AES_128_CMAC
+    #define SKB_SIGNATURE_ALGORITHM_AES_128_CMAC ld374fd7708b7e41fa88afc0a3c78bd82e9248e5e20ab713c
+#endif
+#ifndef SKB_SIGNATURE_ALGORITHM_AES_192_CMAC
+    #define SKB_SIGNATURE_ALGORITHM_AES_192_CMAC la00506241387ae41ae7d0ec8f823e36d390dd0a30644a9c4
+#endif
+#ifndef SKB_SIGNATURE_ALGORITHM_AES_256_CMAC
+    #define SKB_SIGNATURE_ALGORITHM_AES_256_CMAC l13508703e3e039de4d7063ff5c27501ce3b6c9ace9eb853d
+#endif
+#ifndef SKB_SIGNATURE_ALGORITHM_DES_RETAIL_MAC
+    #define SKB_SIGNATURE_ALGORITHM_DES_RETAIL_MAC lce06165d12ff0c2562a4e3ab4bcaf1a18b32401e79a97c0a
+#endif
+#ifndef SKB_SIGNATURE_ALGORITHM_DSA
+    #define SKB_SIGNATURE_ALGORITHM_DSA l055b264c701257b7d4d43aa9a4abc37e42554de86a5de737
+#endif
+#ifndef SKB_SIGNATURE_ALGORITHM_ECDSA
+    #define SKB_SIGNATURE_ALGORITHM_ECDSA l78fa9e68e6d3b3e005613aacba2ff0c01e1d513e1e2395d8
+#endif
+#ifndef SKB_SIGNATURE_ALGORITHM_ECDSA_MD5
+    #define SKB_SIGNATURE_ALGORITHM_ECDSA_MD5 lcac7c682faa0c8cd3f90f4fb68837a05908f65545265126d
+#endif
+#ifndef SKB_SIGNATURE_ALGORITHM_ECDSA_SHA1
+    #define SKB_SIGNATURE_ALGORITHM_ECDSA_SHA1 l35e66ce73862a13b142fd8fb4baad27b203565f18036fbfe
+#endif
+#ifndef SKB_SIGNATURE_ALGORITHM_ECDSA_SHA224
+    #define SKB_SIGNATURE_ALGORITHM_ECDSA_SHA224 l793d685dd63a8971265c95edfc5ab10e19a6fc557a482e20
+#endif
+#ifndef SKB_SIGNATURE_ALGORITHM_ECDSA_SHA256
+    #define SKB_SIGNATURE_ALGORITHM_ECDSA_SHA256 lb14d1f956eb0f3bf1a34c59a63ccf6808754a2c640fd5f31
+#endif
+#ifndef SKB_SIGNATURE_ALGORITHM_ECDSA_SHA384
+    #define SKB_SIGNATURE_ALGORITHM_ECDSA_SHA384 lf733bdebf449e50ea0fd785f3a8c8d8a97ea1e72fe9836a8
+#endif
+#ifndef SKB_SIGNATURE_ALGORITHM_ECDSA_SHA512
+    #define SKB_SIGNATURE_ALGORITHM_ECDSA_SHA512 l6caf341500b968dd9f927c51cd917f9b4751bd047ca71e2a
+#endif
+#ifndef SKB_SIGNATURE_ALGORITHM_ED25519
+    #define SKB_SIGNATURE_ALGORITHM_ED25519 l10a9976b5f25d65e75f86fc7eb745d0b1327677d7ba5d6aa
+#endif
+#ifndef SKB_SIGNATURE_ALGORITHM_FORCE_32
+    #define SKB_SIGNATURE_ALGORITHM_FORCE_32 l5598d798af1a500f82be09a356736a03de4fce77cfe9c0e8
+#endif
+#ifndef SKB_SIGNATURE_ALGORITHM_HMAC_MD5
+    #define SKB_SIGNATURE_ALGORITHM_HMAC_MD5 l34799424e4e41e83e24f82b3c9bf819fd98c739dc0fc8500
+#endif
+#ifndef SKB_SIGNATURE_ALGORITHM_HMAC_SHA1
+    #define SKB_SIGNATURE_ALGORITHM_HMAC_SHA1 laff78cdbdcb6a37d91eb5ac17080f1a6519d5dbcbd4d47d6
+#endif
+#ifndef SKB_SIGNATURE_ALGORITHM_HMAC_SHA224
+    #define SKB_SIGNATURE_ALGORITHM_HMAC_SHA224 l2bf90a88223438d55708e492ac944a7c3ff46cf684c9344b
+#endif
+#ifndef SKB_SIGNATURE_ALGORITHM_HMAC_SHA256
+    #define SKB_SIGNATURE_ALGORITHM_HMAC_SHA256 l93c66d1f2c80b9c23e6db32783f057abb56ab0432eb8f12a
+#endif
+#ifndef SKB_SIGNATURE_ALGORITHM_HMAC_SHA384
+    #define SKB_SIGNATURE_ALGORITHM_HMAC_SHA384 l13d6db6924a722cbc0a7b4ec50b786b14dbb0ed88a2c6f3d
+#endif
+#ifndef SKB_SIGNATURE_ALGORITHM_HMAC_SHA512
+    #define SKB_SIGNATURE_ALGORITHM_HMAC_SHA512 le27c39fdac7d568c7a07c7dfad0b25044e52afd87ab9eddf
+#endif
+#ifndef SKB_SIGNATURE_ALGORITHM_RSA
+    #define SKB_SIGNATURE_ALGORITHM_RSA l40bfd49018fab298fe0e06e33fb7346efaa21473b69b41d9
+#endif
+#ifndef SKB_SIGNATURE_ALGORITHM_RSA_MD5
+    #define SKB_SIGNATURE_ALGORITHM_RSA_MD5 lf2e347be13d3b48b6c7713651f31f8392c760f0c2476f3d1
+#endif
+#ifndef SKB_SIGNATURE_ALGORITHM_RSA_PSS_MD5
+    #define SKB_SIGNATURE_ALGORITHM_RSA_PSS_MD5 l95fe72d58e73d23fc3613979605f06a67d7420f4cea9b154
+#endif
+#ifndef SKB_SIGNATURE_ALGORITHM_RSA_PSS_MD5_EX
+    #define SKB_SIGNATURE_ALGORITHM_RSA_PSS_MD5_EX l5cee60385517daaee1280f7dc30130c7b454c0cad6ac0612
+#endif
+#ifndef SKB_SIGNATURE_ALGORITHM_RSA_PSS_SHA1
+    #define SKB_SIGNATURE_ALGORITHM_RSA_PSS_SHA1 le0cc0836198f4e52a4f4917e5ad992409dadd32a60976f6e
+#endif
+#ifndef SKB_SIGNATURE_ALGORITHM_RSA_PSS_SHA1_EX
+    #define SKB_SIGNATURE_ALGORITHM_RSA_PSS_SHA1_EX l03b8b81de8b89280b78f82b8931f291600b3e9f42db9d60f
+#endif
+#ifndef SKB_SIGNATURE_ALGORITHM_RSA_PSS_SHA224
+    #define SKB_SIGNATURE_ALGORITHM_RSA_PSS_SHA224 l0e3dbb47a78dbfd722665ebc46279266880c0822ae366460
+#endif
+#ifndef SKB_SIGNATURE_ALGORITHM_RSA_PSS_SHA224_EX
+    #define SKB_SIGNATURE_ALGORITHM_RSA_PSS_SHA224_EX lb49091133feff96d2b3b6f7dae81dc67a8d3a2400ee816ac
+#endif
+#ifndef SKB_SIGNATURE_ALGORITHM_RSA_PSS_SHA256
+    #define SKB_SIGNATURE_ALGORITHM_RSA_PSS_SHA256 l87efaae490cc62905f8df1cd454443730c32b491e5cebf9d
+#endif
+#ifndef SKB_SIGNATURE_ALGORITHM_RSA_PSS_SHA256_EX
+    #define SKB_SIGNATURE_ALGORITHM_RSA_PSS_SHA256_EX lde87bb4ef57bb768dacaa72f1b62eb85611daef7d217c454
+#endif
+#ifndef SKB_SIGNATURE_ALGORITHM_RSA_PSS_SHA384
+    #define SKB_SIGNATURE_ALGORITHM_RSA_PSS_SHA384 ld4a341526b241faf5eb26fcdbf7ade6ce129206f2ddef992
+#endif
+#ifndef SKB_SIGNATURE_ALGORITHM_RSA_PSS_SHA384_EX
+    #define SKB_SIGNATURE_ALGORITHM_RSA_PSS_SHA384_EX l304dd491b962dc018b4bdc8d267f0b17a86a9729a41686a9
+#endif
+#ifndef SKB_SIGNATURE_ALGORITHM_RSA_PSS_SHA512
+    #define SKB_SIGNATURE_ALGORITHM_RSA_PSS_SHA512 le623328bc9e07907442d472463d81e9baa92ac1f9c486377
+#endif
+#ifndef SKB_SIGNATURE_ALGORITHM_RSA_PSS_SHA512_EX
+    #define SKB_SIGNATURE_ALGORITHM_RSA_PSS_SHA512_EX ledc93fd3b503e54b8dd50c31859104b93a3d044992c846b8
+#endif
+#ifndef SKB_SIGNATURE_ALGORITHM_RSA_SHA1
+    #define SKB_SIGNATURE_ALGORITHM_RSA_SHA1 l964281d0007007c9f3e0bf51a0c534a1a48aa74e5eff44b1
+#endif
+#ifndef SKB_SIGNATURE_ALGORITHM_RSA_SHA224
+    #define SKB_SIGNATURE_ALGORITHM_RSA_SHA224 l8c20a97a08518bec48e73fb22bfa27314bf96ef087bb257f
+#endif
+#ifndef SKB_SIGNATURE_ALGORITHM_RSA_SHA256
+    #define SKB_SIGNATURE_ALGORITHM_RSA_SHA256 lf0576b699bf84edf0f5d0e4b0032621eda21bff543338c70
+#endif
+#ifndef SKB_SIGNATURE_ALGORITHM_RSA_SHA384
+    #define SKB_SIGNATURE_ALGORITHM_RSA_SHA384 l2245ee098e4d75605f8eac9692c74a3af4880ea789b0572c
+#endif
+#ifndef SKB_SIGNATURE_ALGORITHM_RSA_SHA512
+    #define SKB_SIGNATURE_ALGORITHM_RSA_SHA512 ld821f707c0b710329c2727d83998fff693be5f7d11f75f67
+#endif
+#ifndef SKB_SIGNATURE_ALGORITHM_SPECK_64_128_CMAC
+    #define SKB_SIGNATURE_ALGORITHM_SPECK_64_128_CMAC leb6fe0b5d9076c92c922020cb70b4b07805262ecf064e25d
+#endif
+#ifndef SKB_SecureData
+    #define SKB_SecureData l8f962bd4e178539de3646be4fb53725b8654bb70294b014b
+#endif
+#ifndef SKB_SecureData_Derive
+    #define SKB_SecureData_Derive l85035c9fc12dcb28359b2d1558d42902fcbd7acf13eb59bc
+#endif
+#ifndef SKB_SecureData_Export
+    #define SKB_SecureData_Export l307cbf0e3bf67771d54ac39936c63c8f5956b23ba5f3b158
+#endif
+#ifndef SKB_SecureData_GetInfo
+    #define SKB_SecureData_GetInfo l6878ec85ea3ca15ad18c8de3db7b539a5e099184444c2b9d
+#endif
+#ifndef SKB_SecureData_GetPublicKey
+    #define SKB_SecureData_GetPublicKey l129cfc8b54dd901cf34a9bd55b78402a8558f0d3ccd5d11b
+#endif
+#ifndef SKB_SecureData_Release
+    #define SKB_SecureData_Release l0b08f9848286a0d4c419657ec0aca10bb386aa0860151639
+#endif
+#ifndef SKB_SecureData_Wrap
+    #define SKB_SecureData_Wrap l972fd81a65028f4b8ad7c9568476a4c7fd3d360b4ba1f8d9
+#endif
+#ifndef SKB_SelectBytesDerivationParameters
+    #define SKB_SelectBytesDerivationParameters lbea896975da2408ec78ef8bfd5edfa1783742efd264f1188
+#endif
+#ifndef SKB_SelectBytesDerivationVariant
+    #define SKB_SelectBytesDerivationVariant l070d1d40fa5e9e248ac166906663a6bfacb05e69c189d74d
+#endif
+#ifndef SKB_Sha1DerivationParameters
+    #define SKB_Sha1DerivationParameters l516b1bb8c140969aaf91e7411ff2fe9461d0ff0daeee6a45
+#endif
+#ifndef SKB_Sha2DerivationParameters
+    #define SKB_Sha2DerivationParameters l6f6fc0b08a4bc91583b811bde3354cb8ec373ea22cc0cb8c
+#endif
+#ifndef SKB_ShaAesDerivationParameters
+    #define SKB_ShaAesDerivationParameters l7b0452c87699f47776ef0afe83890184656cc6a6acbda84c
+#endif
+#ifndef SKB_SignTransformParameters
+    #define SKB_SignTransformParameters l46f344ee24d9a77d6ccb8ee5affd84ff311d2725a222e4d0
+#endif
+#ifndef SKB_SignTransformParametersEx
+    #define SKB_SignTransformParametersEx lf5f503978edb11049753fd2763005a492630377082640e68
+#endif
+#ifndef SKB_SignatureAlgorithm
+    #define SKB_SignatureAlgorithm le1fbfa00c8183657880a5473e4eb37b4b1e3721f131c6b6d
+#endif
+#ifndef SKB_Size
+    #define SKB_Size lee355d2126eb616f9c74edb4ad3255a07f296366146519ce
+#endif
+#ifndef SKB_SliceDerivationParameters
+    #define SKB_SliceDerivationParameters lb6a6fa303c04f1462725c5e3437a1d4d901862db0f7678ba
+#endif
+#ifndef SKB_TRANSFORM_TYPE_DIGEST
+    #define SKB_TRANSFORM_TYPE_DIGEST l14e8eba84c7f7322209d0365569d297731fffc46ae2c4296
+#endif
+#ifndef SKB_TRANSFORM_TYPE_FORCE_32
+    #define SKB_TRANSFORM_TYPE_FORCE_32 la8588de607af642a1173da9ccd84bcb12bcd7e1cb86d21b7
+#endif
+#ifndef SKB_TRANSFORM_TYPE_SIGN
+    #define SKB_TRANSFORM_TYPE_SIGN lf0245639807417d963b8fceac68c0452adf8b2886efc516e
+#endif
+#ifndef SKB_TRANSFORM_TYPE_VERIFY
+    #define SKB_TRANSFORM_TYPE_VERIFY l9dd7c3f1ff8af7245b74a9e33aceea97647de1882ac99f3e
+#endif
+#ifndef SKB_Transform
+    #define SKB_Transform l8e8ff13da29fe6d3ca6744b154d62b87076ed740401b130a
+#endif
+#ifndef SKB_TransformType
+    #define SKB_TransformType lb35b712ba17af6958c3a55c4b540c81430d1c9212796c63d
+#endif
+#ifndef SKB_Transform_AddBytes
+    #define SKB_Transform_AddBytes l319334725b960f0ea545217b3a39d6d4ac6af5d0b8347da5
+#endif
+#ifndef SKB_Transform_AddSecureData
+    #define SKB_Transform_AddSecureData lcf6f2565219554cbfb23a3b7f9b353d2e6b4e8f99ff7896a
+#endif
+#ifndef SKB_Transform_GetOutput
+    #define SKB_Transform_GetOutput l76c91bd9ab6d1aba36ee3b4c7af5d20f45c4eecacc662173
+#endif
+#ifndef SKB_Transform_Release
+    #define SKB_Transform_Release l24d9ebc6a38990627d0fe4a6e668de84c0e217bff54db79d
+#endif
+#ifndef SKB_VerifyTransformParameters
+    #define SKB_VerifyTransformParameters lea9151080f7f304170c6914191b47e0da8aff8a5bf6b1bbe
+#endif
+ 
+
+#ifndef _SKB_SECURE_KEY_BOX_H_
+#define _SKB_SECURE_KEY_BOX_H_
+
+#ifndef SKB_NO_EXPORT
+#if __GNUC__ >= 4
+#define SKB_EXPORT __attribute__ ((visibility ("default")))
+#else
+#define SKB_EXPORT
+#endif
+#else
+#define SKB_EXPORT
+#endif  
+
+#define SKB_API_VERSION_MAJOR    5
+#define SKB_API_VERSION_MINOR    40
+#define SKB_API_VERSION_REVISION 0
+#define SKB_API_VERSION_STRING   "5.40.0"
+
+#define SKB_SUCCESS 0x485B5F92
+#define SKB_FAILURE 0x280F0E31
+
+#define SKB_ERROR_INTERNAL           0x41232682
+#define SKB_ERROR_INVALID_PARAMETERS 0x185E4B7F
+#define SKB_ERROR_NOT_SUPPORTED      0x2C075AC0
+#define SKB_ERROR_OUT_OF_RESOURCES   0x07A8E6A1
+#define SKB_ERROR_BUFFER_TOO_SMALL   0x3F5FC1A1
+#define SKB_ERROR_INVALID_FORMAT     0x51D6F00D
+#define SKB_ERROR_ILLEGAL_OPERATION  0x330C4E90
+#define SKB_ERROR_INVALID_STATE      0x1B15A5C4
+#define SKB_ERROR_OUT_OF_RANGE       0x69C26042
+
+#define SKB_ERROR_EVALUATION_EXPIRED            0x1ECB5D20
+#define SKB_ERROR_KEY_CACHE_FAILED              0x3155DE3A
+#define SKB_ERROR_INVALID_EXPORT_KEY_VERSION    0x3CFFC785
+#define SKB_ERROR_INVALID_EXPORT_KEY            0x76E54213
+#define SKB_ERROR_AUTHENTICATION_FAILURE        0x49228E63
+
+#define SKB_CIPHER_FLAG_HIGH_SPEED 1
+#define SKB_CIPHER_FLAG_BALANCED   2
+
+#define SKB_DERIVATION_FLAG_OUTPUT_IN_BIG_ENDIAN 1
+
+#define SKB_KEY_AGREEMENT_MAXIMAL_SECRET_SIZE 0
+
+typedef struct SKB_SecureData SKB_SecureData;
+
+typedef struct SKB_Transform SKB_Transform;
+
+typedef struct SKB_Cipher SKB_Cipher;
+
+typedef struct SKB_Engine SKB_Engine;
+
+typedef struct SKB_KeyAgreement SKB_KeyAgreement;
+
+typedef int SKB_Result;
+typedef unsigned char SKB_Byte;
+typedef unsigned int SKB_Size;
+
+typedef struct {
+    const char* name;
+    const char* value;
+} SKB_EngineProperty;
+
+typedef struct {
+    struct {
+        unsigned int major;
+        unsigned int minor;
+        unsigned int revision;
+    } api_version;
+    unsigned int        flags;
+    unsigned int        property_count;
+    SKB_EngineProperty* properties;  
+} SKB_EngineInfo;
+
+typedef enum {
+    SKB_DATA_TYPE_BYTES = 0x153E4372,  
+    SKB_DATA_TYPE_UNWRAP_BYTES = 0x53D68037,  
+    SKB_DATA_TYPE_RSA_PRIVATE_KEY = 0x260A64A2,
+    SKB_DATA_TYPE_ECC_PRIVATE_KEY = 0x55211163,
+    SKB_DATA_TYPE_DSA_PRIVATE_KEY = 0x320ECDEB,
+    SKB_DATA_TYPE_RSA_PUBLIC_KEY_CONTEXT = 0x0051E0AE,
+    SKB_DATA_TYPE_RSA_STATIC_UNWRAP_CONTEXT = 0x076BA1A7,
+    SKB_DATA_TYPE_RSA_STATIC_SIGN_CONTEXT = 0x487EF425,
+    SKB_DATA_TYPE_FORCE_32 = 0x7fffffff
+} SKB_DataType;
+
+typedef struct {
+    SKB_DataType type;    
+    SKB_Size     size;    
+} SKB_DataInfo;
+
+typedef enum {
+    SKB_DIGEST_ALGORITHM_SHA1 = 0x177776F3,
+    SKB_DIGEST_ALGORITHM_SHA224 = 0x48725C7D,
+    SKB_DIGEST_ALGORITHM_SHA256 = 0x640298E8,
+    SKB_DIGEST_ALGORITHM_SHA384 = 0x69150AF6,
+    SKB_DIGEST_ALGORITHM_SHA512 = 0x4929E453,
+    SKB_DIGEST_ALGORITHM_MD5 = 0x7444EFBE,
+    SKB_DIGEST_ALGORITHM_FORCE_32 = 0x7fffffff
+} SKB_DigestAlgorithm;
+
+typedef enum {
+    SKB_CIPHER_ALGORITHM_NULL = 0x279FD045,
+    SKB_CIPHER_ALGORITHM_AES_128_ECB = 0x54BADD12,
+    SKB_CIPHER_ALGORITHM_AES_128_CBC = 0x0D1E40DC,   
+    SKB_CIPHER_ALGORITHM_AES_128_CTR = 0x561FCCF6,
+    SKB_CIPHER_ALGORITHM_AES_128_GCM = 0x6AC0E5A3,
+    SKB_CIPHER_ALGORITHM_AES_128_CCM = 0x3956FC1A,
+    SKB_CIPHER_ALGORITHM_RSA_1_5 = 0x1474C75D,
+    SKB_CIPHER_ALGORITHM_RSA_OAEP = 0x17075893,  
+    SKB_CIPHER_ALGORITHM_RSA_OAEP_SHA224 = 0x6548ABEC,
+    SKB_CIPHER_ALGORITHM_RSA_OAEP_SHA256 = 0x2CB20146,
+    SKB_CIPHER_ALGORITHM_RSA_OAEP_SHA384 = 0x2300B54D,
+    SKB_CIPHER_ALGORITHM_RSA_OAEP_SHA512 = 0x19078992,
+    SKB_CIPHER_ALGORITHM_RSA_OAEP_MD5 = 0x67143716,
+    SKB_CIPHER_ALGORITHM_ECC_ELGAMAL = 0x7971ADF7,
+    SKB_CIPHER_ALGORITHM_AES_192_ECB = 0x71FD0694,
+    SKB_CIPHER_ALGORITHM_AES_192_CBC = 0x36648E41,
+    SKB_CIPHER_ALGORITHM_AES_192_CTR = 0x7DFE8283,
+    SKB_CIPHER_ALGORITHM_AES_192_GCM = 0x333ED759,
+    SKB_CIPHER_ALGORITHM_AES_192_CCM = 0x331897C2,
+    SKB_CIPHER_ALGORITHM_AES_256_ECB = 0x191ECBF0,
+    SKB_CIPHER_ALGORITHM_AES_256_CBC = 0x0661B2A4,
+    SKB_CIPHER_ALGORITHM_AES_256_CTR = 0x2BDD6AB6,
+    SKB_CIPHER_ALGORITHM_AES_256_GCM = 0x783E0A0D,
+    SKB_CIPHER_ALGORITHM_AES_256_CCM = 0x1AA82826,
+    SKB_CIPHER_ALGORITHM_DES_ECB = 0x1F94BCED,
+    SKB_CIPHER_ALGORITHM_DES_CBC = 0x0EE234E8,
+    SKB_CIPHER_ALGORITHM_TRIPLE_DES_ECB = 0x2AEA85A5,
+    SKB_CIPHER_ALGORITHM_TRIPLE_DES_CBC = 0x2EB3DBF3,
+    SKB_CIPHER_ALGORITHM_RSA = 0x29FC3A15,
+    SKB_CIPHER_ALGORITHM_NIST_AES = 0x115B42C6,
+    SKB_CIPHER_ALGORITHM_XOR = 0x21C1E99E,
+    SKB_CIPHER_ALGORITHM_SPECK_64_128_ECB = 0x2B472F2D,
+    SKB_CIPHER_ALGORITHM_SPECK_64_128_CBC = 0x243CD597,
+    SKB_CIPHER_ALGORITHM_SPECK_64_128_CTR = 0x10B77B26,
+    SKB_CIPHER_ALGORITHM_ASC_X9_TR_31 = 0x36481308,
+    SKB_CIPHER_ALGORITHM_FORCE_32 = 0x7fffffff
+} SKB_CipherAlgorithm;
+
+typedef struct {
+    const SKB_Byte* header;  
+    SKB_Size header_size;  
+} SKB_AscX9Tr31WrapParameters;
+
+typedef struct {
+     
+    SKB_Size counter_size;
+} SKB_CtrModeCipherParameters;
+
+typedef enum {
+    SKB_PADDING_TYPE_NONE = 0x1DE4FE8C,
+    SKB_PADDING_TYPE_XMLENC = 0x5311797B,
+    SKB_PADDING_TYPE_FORCE_32 = 0x7fffffff
+} SKB_PaddingType;
+
+typedef struct {
+    SKB_PaddingType padding;
+} SKB_BlockCipherUnwrapParameters;
+
+typedef struct {
+    const SKB_Byte* additional_authenticated_data;
+    SKB_Size  additional_authenticated_data_size;
+    const SKB_Byte* initialization_vector;
+    SKB_Size  initialization_vector_size;
+    const SKB_Byte* authentication_tag;
+    SKB_Size  authentication_tag_size;
+} SKB_GcmUnwrapParameters;
+
+typedef struct {
+    const SKB_Byte* initialization_vector;
+    SKB_Size  initialization_vector_size;
+} SKB_GcmCipherParameters;
+
+typedef struct {
+    SKB_Byte* authentication_tag;
+    SKB_Size  authentication_tag_size;
+} SKB_AuthenticationParameters;
+
+typedef enum {
+    SKB_SIGNATURE_ALGORITHM_AES_128_CMAC = 0x175255BB,
+    SKB_SIGNATURE_ALGORITHM_AES_192_CMAC = 0x4BED866D,
+    SKB_SIGNATURE_ALGORITHM_AES_256_CMAC = 0x4A5AC383,
+    SKB_SIGNATURE_ALGORITHM_SPECK_64_128_CMAC = 0x284DF7DF,
+    SKB_SIGNATURE_ALGORITHM_HMAC_SHA1 = 0x65108ABC,
+    SKB_SIGNATURE_ALGORITHM_HMAC_SHA224 = 0x74DB1B67,
+    SKB_SIGNATURE_ALGORITHM_HMAC_SHA256 = 0x7EA14581,
+    SKB_SIGNATURE_ALGORITHM_HMAC_SHA384 = 0x4EE0D2FB,
+    SKB_SIGNATURE_ALGORITHM_HMAC_SHA512 = 0x5BB4B583,
+    SKB_SIGNATURE_ALGORITHM_HMAC_MD5 = 0x2E56E202,
+    SKB_SIGNATURE_ALGORITHM_RSA = 0x02F7A3DD,                        
+    SKB_SIGNATURE_ALGORITHM_DSA = 0x01B0AA30,
+    SKB_SIGNATURE_ALGORITHM_ECDSA = 0x314DE8D4,
+    SKB_SIGNATURE_ALGORITHM_ECDSA_SHA1 = 0x7CA5845E,
+    SKB_SIGNATURE_ALGORITHM_ECDSA_SHA224 = 0x54D3089E,
+    SKB_SIGNATURE_ALGORITHM_ECDSA_SHA256 = 0x406EDBD4,
+    SKB_SIGNATURE_ALGORITHM_ECDSA_SHA384 = 0x032AE8D5,
+    SKB_SIGNATURE_ALGORITHM_ECDSA_SHA512 = 0x2ACB689E,
+    SKB_SIGNATURE_ALGORITHM_ECDSA_MD5 = 0x59E92DE6,
+    SKB_SIGNATURE_ALGORITHM_RSA_MD5 = 0x689937CD,
+    SKB_SIGNATURE_ALGORITHM_RSA_SHA1 = 0x0A1F2C9C,
+    SKB_SIGNATURE_ALGORITHM_RSA_SHA224 = 0x02721944,
+    SKB_SIGNATURE_ALGORITHM_RSA_SHA256 = 0x3763E862,
+    SKB_SIGNATURE_ALGORITHM_RSA_SHA384 = 0x28919745,
+    SKB_SIGNATURE_ALGORITHM_RSA_SHA512 = 0x33B2CA77,
+    SKB_SIGNATURE_ALGORITHM_RSA_PSS_MD5 = 0x52BBC19C,
+    SKB_SIGNATURE_ALGORITHM_RSA_PSS_SHA1 = 0x12FD0CF6,
+    SKB_SIGNATURE_ALGORITHM_RSA_PSS_SHA224 = 0x2C3383BD,
+    SKB_SIGNATURE_ALGORITHM_RSA_PSS_SHA256 = 0x3FF1CB0E,
+    SKB_SIGNATURE_ALGORITHM_RSA_PSS_SHA384 = 0x48748FBE,
+    SKB_SIGNATURE_ALGORITHM_RSA_PSS_SHA512 = 0x35785F01,
+    SKB_SIGNATURE_ALGORITHM_RSA_PSS_MD5_EX = 0x42E63BFF,
+    SKB_SIGNATURE_ALGORITHM_RSA_PSS_SHA1_EX = 0x612C737E,
+    SKB_SIGNATURE_ALGORITHM_RSA_PSS_SHA224_EX = 0x459867BB,
+    SKB_SIGNATURE_ALGORITHM_RSA_PSS_SHA256_EX = 0x154F8D4A,
+    SKB_SIGNATURE_ALGORITHM_RSA_PSS_SHA384_EX = 0x094D91C8,
+    SKB_SIGNATURE_ALGORITHM_RSA_PSS_SHA512_EX = 0x6FE24BB7,
+    SKB_SIGNATURE_ALGORITHM_DES_RETAIL_MAC = 0x01EBA310,
+    SKB_SIGNATURE_ALGORITHM_ED25519 = 0x3AAFBB56,
+    SKB_SIGNATURE_ALGORITHM_FORCE_32 = 0x7fffffff
+} SKB_SignatureAlgorithm;
+
+typedef enum {
+    SKB_DERIVATION_ALGORITHM_SLICE = 0x508A6715,  
+    SKB_DERIVATION_ALGORITHM_BLOCK_SLICE = 0x779A3320,  
+    SKB_DERIVATION_ALGORITHM_BLOCK_CONCATENATE = 0x39DBBCFA,  
+    SKB_DERIVATION_ALGORITHM_SELECT_BYTES = 0x385320E4,  
+    SKB_DERIVATION_ALGORITHM_SHA_1 = 0x5429C4A6,  
+    SKB_DERIVATION_ALGORITHM_SHA_256 = 0x6E4F1D2C,  
+    SKB_DERIVATION_ALGORITHM_SHA_384 = 0x0E120544,  
+    SKB_DERIVATION_ALGORITHM_SHA_512 = 0x01F48707,  
+    SKB_DERIVATION_ALGORITHM_HMAC_SHA256 = 0x4ED4150B,  
+    SKB_DERIVATION_ALGORITHM_HMAC_SHA384 = 0x4104F6A7,  
+    SKB_DERIVATION_ALGORITHM_HMAC_SHA512 = 0x688CA7CD,  
+    SKB_DERIVATION_ALGORITHM_REVERSE_BYTES = 0x5EB69002,  
+    SKB_DERIVATION_ALGORITHM_NIST_800_108_COUNTER_CMAC_AES128 = 0x154D256B,  
+    SKB_DERIVATION_ALGORITHM_NIST_800_108_COUNTER_CMAC_AES128_L16BIT = 0x7C5A99D7,  
+    SKB_DERIVATION_ALGORITHM_NIST_800_108_COUNTER_CMAC_SPECK_L16BITLE = 0x7332BD1B,  
+    SKB_DERIVATION_ALGORITHM_OMA_DRM_KDF2 = 0x3D3B34B2,  
+    SKB_DERIVATION_ALGORITHM_CIPHER = 0x0F19E12B,  
+    SKB_DERIVATION_ALGORITHM_RAW_BYTES_FROM_ECC_PRIVATE = 0x036B8E11,  
+    SKB_DERIVATION_ALGORITHM_SHA_AES = 0x556118D4,  
+    SKB_DERIVATION_ALGORITHM_XOR = 0x1264DBFB,  
+    SKB_DERIVATION_ALGORITHM_DOUBLE_AES_ENCRYPT = 0x448B9B45,  
+    SKB_DERIVATION_ALGORITHM_GET_RESTRICTED_USAGE_KEY = 0x2D66BAA6,  
+    SKB_DERIVATION_ALGORITHM_HKDF_SHA256 = 0x10F80641,  
+    SKB_DERIVATION_ALGORITHM_AES_PLAIN_KEY_DECRYPT = 0x30F2BDAE,  
+    SKB_DERIVATION_ALGORITHM_MIX_WITH_PLAIN_A = 0x64F1A44A,  
+    SKB_DERIVATION_ALGORITHM_MIX_WITH_PLAIN_B = 0x220FBE05,  
+    SKB_DERIVATION_ALGORITHM_FORCE_32 = 0x7fffffff
+} SKB_DerivationAlgorithm;
+
+typedef enum {
+    SKB_CIPHER_DIRECTION_ENCRYPT = 0x6E7B8712,
+    SKB_CIPHER_DIRECTION_DECRYPT = 0x481F8AF8,
+    SKB_CIPHER_DIRECTION_FORCE_32 = 0x7fffffff
+} SKB_CipherDirection;
+
+typedef enum {
+    SKB_DATA_FORMAT_RAW = 0x46B182BB,
+    SKB_DATA_FORMAT_PKCS8 = 0x305C41F0,
+    SKB_DATA_FORMAT_PKCS1 = 0x16C7EA4D,
+    SKB_DATA_FORMAT_ECC_BINARY = 0x4E2ADAC2,
+    SKB_DATA_FORMAT_ECC_PRIVATE = 0x52B5B504,
+    SKB_DATA_FORMAT_ECC_PUBLIC = 0x3E0B7AD9,
+    SKB_DATA_FORMAT_ECC_PUBLIC_POINT = 0x0BCC9C41,
+    SKB_DATA_FORMAT_ECC_PUBLIC_X9_62 = 0x7FF59BE9,
+    SKB_DATA_FORMAT_JSON = 0x778D5F19,
+    SKB_DATA_FORMAT_CRT = 0x7F7E9C8D,
+    SKB_DATA_FORMAT_CRT_EQUAL_LEN = 0x5312E215,
+    SKB_DATA_FORMAT_FORCE_32 = 0x7fffffff
+} SKB_DataFormat;
+
+typedef enum {
+    SKB_TRANSFORM_TYPE_DIGEST = 0x3BB8D52F,  
+    SKB_TRANSFORM_TYPE_SIGN = 0x67F12B8F,  
+
+    SKB_TRANSFORM_TYPE_VERIFY = 0x32C7F4DE,
+
+    SKB_TRANSFORM_TYPE_FORCE_32 = 0x7fffffff
+} SKB_TransformType;
+
+typedef enum
+{
+    SKB_SELECT_BYTES_DERIVATION_ODD_BYTES = 0x46AFE1D9,  
+    SKB_SELECT_BYTES_DERIVATION_EVEN_BYTES = 0x014BC973,  
+    SKB_SELECT_BYTES_DERIVATION_FORCE_32 = 0x7fffffff
+} SKB_SelectBytesDerivationVariant;
+
+typedef struct {
+    SKB_DigestAlgorithm algorithm;
+} SKB_DigestTransformParameters;
+
+typedef struct {
+    SKB_SignatureAlgorithm  algorithm;  
+    const SKB_SecureData*   key;        
+} SKB_SignTransformParameters;
+
+typedef struct {
+    SKB_SignTransformParameters base;
+    const void*                 extension;  
+} SKB_SignTransformParametersEx;
+
+typedef struct {
+    SKB_SignatureAlgorithm  algorithm;       
+    const SKB_SecureData*   key;             
+    const SKB_Byte*         signature;       
+    SKB_Size                signature_size;  
+} SKB_VerifyTransformParameters;
+
+typedef struct {
+    SKB_CipherAlgorithm     cipher_algorithm;
+    SKB_CipherDirection     cipher_direction;
+    unsigned int            cipher_flags;
+    const void*             cipher_parameters;
+    const SKB_SecureData*   cipher_key;
+    const SKB_Byte*         iv;
+    SKB_Size                iv_size;
+} SKB_CipherDerivationParameters;
+
+typedef struct {
+    unsigned int round_count;
+    unsigned int output_size;
+} SKB_Sha1DerivationParameters;
+
+typedef struct {
+    const SKB_Byte*         plain1;
+    SKB_Size                plain1_size;
+    const SKB_Byte*         plain2;
+    SKB_Size                plain2_size;
+} SKB_Sha2DerivationParameters;
+
+typedef struct {
+    unsigned int first;
+    unsigned int size;
+} SKB_SliceDerivationParameters;
+
+typedef struct
+{
+    SKB_SelectBytesDerivationVariant variant;
+    unsigned int output_size;
+} SKB_SelectBytesDerivationParameters;
+
+typedef struct {
+    const SKB_Byte*         label;
+    SKB_Size                label_size;
+    const SKB_Byte*         context;
+    SKB_Size                context_size;
+    SKB_Size                output_size;
+} SKB_Nist800108KdfDerivationParameters;
+
+typedef SKB_Nist800108KdfDerivationParameters SKB_Nist800108CounterCmacAes128Parameters;
+
+typedef struct {
+    const SKB_Byte* label;
+    SKB_Size        label_size;
+    SKB_Size        output_size;
+} SKB_OmaDrmKdf2DerivationParameters;
+
+typedef struct {
+    const SKB_SecureData* secure_p;
+    const SKB_Byte*       plain_1;
+    SKB_Size              plain_1_size;
+    const SKB_Byte*       plain_2;
+} SKB_ShaAesDerivationParameters;
+
+typedef struct {
+    const SKB_SecureData* secure_input;
+    const SKB_Byte*       plain_input;
+    SKB_Size              plain_input_size;
+} SKB_GenericDerivationParameters;
+
+typedef struct {
+    const SKB_Byte* info;
+    SKB_Size        info_length;
+    const SKB_Byte* salt;
+    SKB_Size        salt_length;
+    SKB_Size        L;
+} SKB_HkdfDerivationParameters;
+
+typedef enum {
+     
+    SKB_EXPORT_TARGET_CLEARTEXT = 0x13460E07,
+
+    SKB_EXPORT_TARGET_PERSISTENT = 0x27F42335,
+
+    SKB_EXPORT_TARGET_CROSS_ENGINE = 0x39C226C4,
+
+    SKB_EXPORT_TARGET_CUSTOM = 0x4437B2C4,
+
+    SKB_EXPORT_TARGET_FORCE_32 = 0x7fffffff
+} SKB_ExportTarget;
+
+typedef struct {
+    const char* uid;      
+    const void* options;  
+} SKB_ExportCustomParameters;
+
+typedef enum {
+    SKB_ECC_CURVE_SECP_R1_160 = 0x11579BD9,   
+    SKB_ECC_CURVE_NIST_192 = 0x798F2CC5,      
+    SKB_ECC_CURVE_NIST_224 = 0x0B101FD3,      
+    SKB_ECC_CURVE_NIST_256 = 0x44D51347,      
+    SKB_ECC_CURVE_NIST_384 = 0x63CCFAE6,      
+    SKB_ECC_CURVE_NIST_521 = 0x00DB5F57,      
+    SKB_ECC_CURVE_CUSTOM = 0x7176B977,         
+    SKB_ECC_CURVE_FORCE_32 = 0x7fffffff
+} SKB_EccCurve;
+
+typedef enum {
+    SKB_KEY_AGREEMENT_ALGORITHM_ECDH = 0x4DB7965C,  
+    SKB_KEY_AGREEMENT_ALGORITHM_PRIME_DH = 0x3F1556AB,  
+    SKB_KEY_AGREEMENT_ALGORITHM_ECDH_STATIC = 0x3DE0BD2B,  
+    SKB_KEY_AGREEMENT_ALGORITHM_X25519 = 0x01AFDCAE,
+    SKB_KEY_AGREEMENT_ALGORITHM_FORCE_32 = 0x7fffffff
+} SKB_KeyAgreementAlgorithm;
+
+typedef struct
+{
+    const SKB_Byte* context;
+    SKB_Size context_size;
+} SKB_PrimeDhParameters;
+
+typedef struct {
+    SKB_Size prime_bit_length;     
+    SKB_Size order_bit_length;     
+    SKB_Size ecc_instance_length;  
+    const SKB_Byte* context;       
+    SKB_Size context_size;         
+} SKB_EccCurveParameters;
+
+typedef struct {
+    SKB_EccCurve curve;
+    const SKB_EccCurveParameters* curve_parameters;
+    const unsigned int* random_value;  
+} SKB_EccParameters;
+
+typedef struct {
+    SKB_Size l_bit_length;  
+    SKB_Size n_bit_length;  
+    const SKB_Byte* p;  
+    const SKB_Byte* q;  
+    const SKB_Byte* g;  
+} SKB_DsaParameters;
+
+typedef struct {
+    SKB_Size n_bit_length;  
+    SKB_Size e;  
+} SKB_RsaParameters;
+
+typedef struct {
+    const SKB_Byte* salt;  
+    SKB_Size salt_length;  
+} SKB_RsaPssParameters;
+
+typedef struct {
+    SKB_Size byte_count;
+} SKB_RawBytesParameters;
+
+typedef struct {
+    const SKB_Byte* iv;
+} SKB_BlockCipherWrapParameters;
+
+typedef struct {
+    unsigned int derivation_flags;
+} SKB_RawBytesFromEccPrivateDerivationParameters;
+
+typedef struct {
+    SKB_EccCurve curve;
+    const SKB_EccCurveParameters* curve_parameters;
+    const SKB_SecureData* private_key;  
+} SKB_EcdhParameters;
+
+typedef struct {
+    const SKB_SecureData* private_key;  
+} SKB_EddhParameters;
+
+#define SKB_SUCCEEDED(_result) ((_result)==SKB_SUCCESS)
+#define SKB_FAILED(_result)    ((_result)!=SKB_SUCCESS)
+
+#if defined(__cplusplus)
+extern "C" {
+#endif
+
+SKB_EXPORT SKB_Result
+SKB_Engine_GetInstance(SKB_Engine** engine);
+
+SKB_EXPORT SKB_Result
+SKB_Engine_Release(SKB_Engine* self);
+
+SKB_EXPORT SKB_Result
+SKB_Engine_SetDeviceId(SKB_Engine* self, const SKB_Byte* id, SKB_Size size);
+
+SKB_EXPORT SKB_Result
+SKB_Engine_GetInfo(const SKB_Engine* self, SKB_EngineInfo* info);
+
+SKB_EXPORT SKB_Result
+SKB_Engine_GetDataByName(SKB_Engine* self, const char* name, SKB_SecureData** data);
+
+SKB_EXPORT SKB_Result
+SKB_Engine_CreateDataFromWrapped(SKB_Engine*           self,
+                                 const SKB_Byte*       wrapped,
+                                 SKB_Size              wrapped_size,
+                                 SKB_DataType          wrapped_type,
+                                 SKB_DataFormat        wrapped_format,
+                                 SKB_CipherAlgorithm   wrapping_algorithm,
+                                 const void*           wrapping_parameters,
+                                 const SKB_SecureData* unwrapping_key,
+                                 SKB_SecureData**      data);
+
+SKB_EXPORT SKB_Result
+SKB_Engine_CreateDataFromExported(SKB_Engine*      self,
+                                  const SKB_Byte*  exported,
+                                  SKB_Size         exported_size,
+                                  SKB_SecureData** data);
+
+SKB_EXPORT SKB_Result
+SKB_Engine_GenerateSecureData(SKB_Engine*      self,
+                              SKB_DataType     data_type,
+                              const void*      generate_parameters,
+                              SKB_SecureData** data);
+
+SKB_EXPORT SKB_Result
+SKB_Engine_CreateTransform(SKB_Engine*       self,
+                           SKB_TransformType transform_type,
+                           const void*       transform_parameters,
+                           SKB_Transform**   transform);
+
+SKB_EXPORT SKB_Result
+SKB_Engine_CreateCipher(SKB_Engine*           self,
+                        SKB_CipherAlgorithm   cipher_algorithm,
+                        SKB_CipherDirection   cipher_direction,
+                        unsigned int          cipher_flags,
+                        const void*           cipher_parameters,
+                        const SKB_SecureData* cipher_key,
+                        SKB_Cipher**          cipher);
+
+SKB_EXPORT SKB_Result
+SKB_Engine_CreateKeyAgreement(SKB_Engine*               self,
+                              SKB_KeyAgreementAlgorithm key_agreement_algorithm,
+                              const void*               key_agreement_parameters,
+                              SKB_KeyAgreement**        key_agreement);
+
+SKB_EXPORT SKB_Result
+SKB_Engine_WrapDataFromPlain(SKB_Engine*           self,
+                             const SKB_Byte*       plain,
+                             SKB_Size              plain_size,
+                             SKB_DataType          data_type,
+                             SKB_DataFormat        plain_format,
+                             SKB_CipherAlgorithm   algorithm,
+                             const void*           encryption_parameters,
+                             const SKB_SecureData* encryption_key,
+                             const SKB_Byte*       iv,
+                             SKB_Size              iv_size,
+                             SKB_SecureData**      data);
+
+SKB_EXPORT SKB_Result
+SKB_Engine_UpgradeExportedData(SKB_Engine*     self,
+                               const SKB_Byte* input,
+                               SKB_Size        input_size,
+                               SKB_Byte*       buffer,
+                               SKB_Size*       buffer_size);
+
+SKB_EXPORT SKB_Result
+SKB_SecureData_Release(SKB_SecureData* self);
+
+SKB_EXPORT SKB_Result
+SKB_SecureData_GetInfo(const SKB_SecureData* self, SKB_DataInfo* info);
+
+SKB_EXPORT SKB_Result
+SKB_SecureData_Export(const SKB_SecureData* self,
+                      SKB_ExportTarget      target,
+                      const void*           target_parameters,
+                      SKB_Byte*             buffer,
+                      SKB_Size*             buffer_size);
+
+SKB_EXPORT SKB_Result
+SKB_SecureData_Wrap(const SKB_SecureData* self,
+                    SKB_CipherAlgorithm   wrapping_algorithm,
+                    const void*           wrapping_parameters,
+                    const SKB_SecureData* wrapping_key,
+                    SKB_Byte*             buffer,
+                    SKB_Size*             buffer_size);
+
+SKB_EXPORT SKB_Result
+SKB_SecureData_Derive(const SKB_SecureData*   self,
+                      SKB_DerivationAlgorithm algorithm,
+                      const void*             parameters,
+                      SKB_SecureData**        data);
+
+SKB_EXPORT SKB_Result
+SKB_SecureData_GetPublicKey(const SKB_SecureData* self,
+                            SKB_DataFormat        format,
+                            const void*           parameters,
+                            SKB_Byte*             output,
+                            SKB_Size*             output_size);
+
+SKB_EXPORT SKB_Result
+SKB_Transform_Release(SKB_Transform* self);
+
+SKB_EXPORT SKB_Result
+SKB_Transform_AddBytes(SKB_Transform*  self,
+                       const SKB_Byte* data,
+                       SKB_Size        data_size);
+
+SKB_EXPORT SKB_Result
+SKB_Transform_AddSecureData(SKB_Transform* self, const SKB_SecureData* data);
+
+SKB_EXPORT SKB_Result
+SKB_Transform_GetOutput(SKB_Transform* self,
+                        SKB_Byte*      output,
+                        SKB_Size*      output_size);
+
+SKB_EXPORT SKB_Result
+SKB_Cipher_ProcessBuffer(SKB_Cipher*     self,
+                         const SKB_Byte* in_buffer,
+                         SKB_Size        in_buffer_size,
+                         SKB_Byte*       out_buffer,
+                         SKB_Size*       out_buffer_size,
+                         const SKB_Byte* iv,
+                         SKB_Size        iv_size);
+
+SKB_EXPORT SKB_Result
+SKB_Cipher_ProcessFinal(SKB_Cipher* self,
+                        const void* parameters);
+
+SKB_EXPORT SKB_Result
+SKB_Cipher_ProcessAad(SKB_Cipher*     self,
+                      const SKB_Byte* in_buffer,
+                      SKB_Size        in_buffer_size);
+
+SKB_EXPORT SKB_Result
+SKB_Cipher_Release(SKB_Cipher* self);
+
+SKB_EXPORT SKB_Result
+SKB_KeyAgreement_GetPublicKey(SKB_KeyAgreement* self,
+                              SKB_Byte*         public_key_buffer,
+                              SKB_Size*         public_key_buffer_size);
+
+SKB_EXPORT SKB_Result
+SKB_KeyAgreement_ComputeSecret(SKB_KeyAgreement* self,
+                               const SKB_Byte*   peer_public_key,
+                               SKB_Size          peer_public_key_size,
+                               SKB_Size          secret_size,
+                               SKB_SecureData**  secret);
+
+SKB_EXPORT SKB_Result
+SKB_KeyAgreement_Release(SKB_KeyAgreement* self);
+
+#if defined(__cplusplus)
+}
+#endif
+
+#endif  
