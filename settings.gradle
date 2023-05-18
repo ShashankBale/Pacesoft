@@ -23,11 +23,6 @@ dependencyResolutionManagement {
             }
         }
 
-        maven {
-            url "https://jitpack.io"
-            credentials { username authTokenPacesoft }
-        }
-
         flatDir {
             dirs 'pacesoftsdk/libs'
         }

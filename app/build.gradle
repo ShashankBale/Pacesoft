@@ -91,6 +91,7 @@ dependencies {
     implementation project(':xcode')
     implementation project(':pacesoftsdk')
     //implementation 'com.github.SBale-Pace:PacesoftAndroidSample:0.0.1'
+    //implementation 'com.github.ShashankBale:Pacesoft:0.0.1'
 
     //implementation 'com.github.ShashankBale.Chuck:lib-chuck-debug:0.0.2'
 
