@@ -27,7 +27,9 @@ dependencyResolutionManagement {
             credentials { username authTokenPacesoft }
         }
 
-       /* flatDir {
+       /*
+       //for zDefend
+       flatDir {
             dirs 'pacesoftsdk/libs'
         }*/
     }

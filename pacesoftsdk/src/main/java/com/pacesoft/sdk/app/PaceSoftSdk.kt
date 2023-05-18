@@ -33,9 +33,15 @@ object PaceSoftSdk {
         XCodeApp.app = application
         val ctx = application.applicationContext
 
+        initNativeC()
         //initZDefend()
         XHeartbeatService.startHeartbeatService(ctx)
         ProcessLifecycleOwner.get().lifecycle.addObserver(lifecycleEventObserver)
+    }
+
+    private fun initNativeC() {
+        //System.loadLibrary("native-lib")
+        System.loadLibrary("km_l2")
     }
 
 

@@ -21,9 +21,6 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
-
-    buildToolsVersion "30.0.3"
-
     buildTypes {
         release {
             minifyEnabled false
@@ -31,56 +28,19 @@ android {
         }
     }
 
-    //versionName : Max.Min.Change.Date(yymmdd).Stage
-    /*productFlavors {
-        amadis {
-            dimension "PacesoftDemo"
-            buildConfigField "String", "buildVar", "\"amadis\""
-        }
-
-        ingenico {
-            dimension "PacesoftDemo"
-            buildConfigField "String", "buildVar", "\"ingenico\""
-        }
-    }*/
-
+    //For androidx.lifecycle.ProcessLifecycleOwner
     dataBinding {
         enabled = true
-    }
-
-    kapt {
-        generateStubs = true
-    }
-
-    androidExtensions {
-        experimental = true
     }
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
-
-    kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_1_8
-    }
-
-    packagingOptions {
-        resources {
-            excludes += ['META-INF/atomicfu.kotlin_module', 'META-INF/viewpump_release.kotlin_module']
-        }
-
-        pickFirst 'google/protobuf/*'
-    }
-
-    lint {
-        abortOnError false
-        checkReleaseBuilds false
-    }
 }
 
 dependencies {
-    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.9.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     testImplementation 'junit:junit:4.13.2'
@@ -90,18 +50,4 @@ dependencies {
     implementation project(':pacesoftsdk')
     implementation project(':xcode')
     //implementation 'com.github.ShashankBale.Pacesoft:pacesoftsdk:0.0.5'
-
-    def agnosVersion = '3.5.12'
-    implementation("ca.amadis.agnos:agnos-pacesoft-sred-debug:${agnosVersion}") {
-        exclude group: 'androidx.core', module: 'core'
-        exclude group: 'androidx.core', module: 'core-ktx'
-        exclude group: 'androidx.localbroadcastmanager', module: 'localbroadcastmanager'
-        exclude group: 'androidx.annotation', module: 'annotation-experimental'
-    }
-    /*releaseImplementation("ca.amadis.agnos:agnos-pacesoft-sred-release:${agnosVersion}") {
-        exclude group: 'androidx.core', module: 'core'
-        exclude group: 'androidx.core', module: 'core-ktx'
-        exclude group: 'androidx.localbroadcastmanager', module: 'localbroadcastmanager'
-        exclude group: 'androidx.annotation', module: 'annotation-experimental'
-    }*/
 }
