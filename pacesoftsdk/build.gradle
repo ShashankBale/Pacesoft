@@ -1,9 +1,7 @@
-plugins {
-    id 'com.android.library'
-    id 'org.jetbrains.kotlin.android'
-    id 'kotlin-android'
-    id 'kotlin-android-extensions'
-}
+apply plugin: 'com.android.library'
+apply plugin: 'org.jetbrains.kotlin.android'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdk 33
@@ -114,6 +112,8 @@ android {
         amadisReleaseImplementation
         ingenicoReleaseImplementation
     }
+
+    namespace 'com.pacesoft.sdk'
 }
 
 dependencies {
