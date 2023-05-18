@@ -28,7 +28,7 @@ android {
         jvmTarget = '1.8'
     }
 
-    namespace 'com.sample.pacesoft'
+    namespace 'x.code'
 }
 
 dependencies {

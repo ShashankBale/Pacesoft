@@ -3,12 +3,12 @@ package x.code.util.log
 import android.util.Log
 import android.view.Gravity
 import android.widget.Toast
-import x.code.BuildConfig
 import x.code.app.XCodeApp
+import x.code.util.XBuild
 import x.code.util.view.text.XStr
 
 fun delog(t: String?, m: String) {
-    if(BuildConfig.DEBUG) {
+    if(XBuild.isDebug()) {
         var t = t
         var m = m
         t = checkIsEmpty(t)
@@ -115,7 +115,7 @@ fun toast(iRes: Int) {
  */
 fun dtoast(iRes: Int) {
     try {
-        if (BuildConfig.DEBUG) toast(iRes)
+        if (XBuild.isDebug()) toast(iRes)
     } catch (e: Exception) {
         e.printStackTrace()
     } catch (e: Error) {
@@ -151,7 +151,7 @@ fun toast(str: String, isShort: Boolean = false) {
  */
 fun dtoast(str: String) {
     try {
-        if (BuildConfig.DEBUG) {
+        if (XBuild.isDebug()) {
             try {
                 val t = Toast.makeText(XCodeApp.app, "$str", Toast.LENGTH_SHORT)
                 t.setGravity(Gravity.TOP, 0, 0);
