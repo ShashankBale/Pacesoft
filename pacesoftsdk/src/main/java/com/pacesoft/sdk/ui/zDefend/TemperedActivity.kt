@@ -8,8 +8,8 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.pacesoft.sdk.R
 import com.pacesoft.sdk.app.PaceSoftSdk
-import com.zimperium.zdetection.api.v1.Threat
-import com.zimperium.zdetection.api.v1.enums.ThreatSeverity
+//import com.zimperium.zdetection.api.v1.Threat
+//import com.zimperium.zdetection.api.v1.enums.ThreatSeverity
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -44,7 +44,7 @@ class TemperedActivity : AppCompatActivity() {
 
 
         // Listen to new threat detection
-        PaceSoftSdk.mXzDefend.detectedThreatLiveData().observe(this) { zDThreat: Threat? ->
+        /*PaceSoftSdk.mXzDefend.detectedThreatLiveData().observe(this) { zDThreat: Threat? ->
             zDThreat ?: return@observe
             vgZDThreat?.show()
             tvReferenceNo?.show()
@@ -57,11 +57,11 @@ class TemperedActivity : AppCompatActivity() {
                 vgZDThreat?.setBackgroundResource(R.drawable.rect_c6_red_500_stroke)
             else
                 vgZDThreat?.setBackgroundResource(R.drawable.rect_c6_divider_color_stroke)
-        }
+        }*/
 
 
         // Listen to new threat detection
-        PaceSoftSdk.mXzDefend.activeThreatsLiveData().observe(this) { alThreat: List<Threat>? ->
+        /*PaceSoftSdk.mXzDefend.activeThreatsLiveData().observe(this) { alThreat: List<Threat>? ->
             alThreat ?: return@observe
 
             val sb = StringBuffer()
@@ -86,10 +86,10 @@ class TemperedActivity : AppCompatActivity() {
 
             tvAllThreat?.text = sb.toString()
             tvReferenceNo?.text = "Error code : $latestReferenceNo"
-        }
+        }*/
     }
 
-    private fun getReferenceId(it: Threat) = "E${it.threatInternalID}"
+    //private fun getReferenceId(it: Threat) = "E${it.threatInternalID}"
 
     private fun initObject() {
         initUi()

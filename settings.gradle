@@ -8,8 +8,8 @@ pluginManagement {
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
-        google()
         mavenCentral()
+        google()
 
         jcenter()
         maven { url "https://jitpack.io" }
@@ -27,9 +27,9 @@ dependencyResolutionManagement {
             credentials { username authTokenPacesoft }
         }
 
-        flatDir {
+       /* flatDir {
             dirs 'pacesoftsdk/libs'
-        }
+        }*/
     }
 }
 

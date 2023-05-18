@@ -1,4 +1,5 @@
 package com.pacesoft.sdk.app
+/*
 
 import android.content.Context
 import android.content.Intent
@@ -71,17 +72,21 @@ class XZDefend(private val mCtx: Context) {
     private fun isThreatSeverityForTemperedPage(threat: Threat) =
         threat.threatSeverity == ThreatSeverity.CRITICAL || threat.threatSeverity == ThreatSeverity.IMPORTANT
 
-    /**
+    */
+/**
      * Init zDefend Observer
      * If valid threat got detected than Start Tempered Activity
-     **/
-    /*fun initZDefendObservers() {
+     **//*
+
+    */
+/*fun initZDefendObservers() {
         //Listen to new threat detection
         mldDetectedThreat.observeForever { threat: Threat? ->
             threat ?: return@observeForever
             startTemperedActivity(threat)
         }
-    }*/
+    }*//*
+
 
     private fun startTemperedActivity(threat: Threat) {
         //If Thread is detected than navigate to Tempered Screen
@@ -94,7 +99,8 @@ class XZDefend(private val mCtx: Context) {
 
 
     //Launcher Dialog for Critical Thread
-    /*private fun showCriticalThreat(threat: Threat) {
+    */
+/*private fun showCriticalThreat(threat: Threat) {
         //Show the alert.
         val intent = Intent(
             mCtx,
@@ -108,14 +114,17 @@ class XZDefend(private val mCtx: Context) {
             if (threat.humanThreatSummary != null) threat.humanThreatSummary.toString() else ""
         )
         mCtx.startActivity(intent)
-    }*/
+    }*//*
 
-    /**
+
+    */
+/**
      * Set license from resource.
      * add DetectionState callback.
      * Initialize the detection instance with our configuration -- it kicks off the
      * authentication process.
-     */
+     *//*
+
     fun initializeZDefend() {
         info("initializeZDefend()")
         if (mzDefendInitialized) return
@@ -157,11 +166,13 @@ class XZDefend(private val mCtx: Context) {
             val activeThreats = disposition.activeThreats
             mLdAlThreat.postValue(activeThreats)
 
-            /* TODO : Sha2nk To Sha2nk, check this logic
+            */
+/* TODO : Sha2nk To Sha2nk, check this logic
             clear SKB keys
             finish()
             startActivity()
-            * */
+            * *//*
+
 
             if (TemperedActivity.isTemperedPageCreated == false &&
                 activeThreats.isNotEmpty()
@@ -179,4 +190,4 @@ class XZDefend(private val mCtx: Context) {
             }
         }
     }
-}
+}*/

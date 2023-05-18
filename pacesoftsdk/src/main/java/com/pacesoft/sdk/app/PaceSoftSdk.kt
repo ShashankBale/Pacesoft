@@ -16,7 +16,7 @@ object PaceSoftSdk {
 
     lateinit var app: Application
     lateinit var appId: String
-    lateinit var mXzDefend: XZDefend
+    //lateinit var mXzDefend: XZDefend
     lateinit var callback: PaceSoftCallback
 
     val ctx: Context by lazy { app.applicationContext }
@@ -53,8 +53,8 @@ object PaceSoftSdk {
 
     fun onStart() {
         elog(tag, "#onStart")
-        if (::mXzDefend.isInitialized)
-            mXzDefend.getActiveThreat()
+        /*if (::mXzDefend.isInitialized)
+            mXzDefend.getActiveThreat()*/
     }
 
     fun onStop() {
@@ -62,9 +62,9 @@ object PaceSoftSdk {
     }
 
     private fun initZDefend() {
-        mXzDefend = XZDefend(ctx)
+        /*mXzDefend = XZDefend(ctx)
         mXzDefend.initializeZDefend()
-        mXzDefend.startDetection()
+        mXzDefend.startDetection()*/
     }
 
     fun isAppInit() = PaceSoftSdk::app.isInitialized
