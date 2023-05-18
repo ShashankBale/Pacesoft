@@ -38,5 +38,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "Pacesoft Sample"
 include ':app'
-include ':xcode'
 include ':pacesoftsdk'

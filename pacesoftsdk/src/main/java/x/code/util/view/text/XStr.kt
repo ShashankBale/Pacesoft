@@ -4,7 +4,6 @@ import android.app.Activity
 import android.content.res.Resources
 import android.text.TextUtils
 import androidx.core.text.HtmlCompat
-import x.code.R
 import x.code.util.number.Numb
 import java.math.RoundingMode
 import java.security.MessageDigest
