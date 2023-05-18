@@ -16,7 +16,7 @@ android {
         versionCode 1
         versionName "1.0"
 
-        flavorDimensions 'PacesoftDemo'
+        //flavorDimensions 'PacesoftDemo'
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -32,7 +32,7 @@ android {
     }
 
     //versionName : Max.Min.Change.Date(yymmdd).Stage
-    productFlavors {
+    /*productFlavors {
         amadis {
             dimension "PacesoftDemo"
             buildConfigField "String", "buildVar", "\"amadis\""
@@ -42,7 +42,7 @@ android {
             dimension "PacesoftDemo"
             buildConfigField "String", "buildVar", "\"ingenico\""
         }
-    }
+    }*/
 
     dataBinding {
         enabled = true
@@ -88,10 +88,11 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
 
-    implementation project(':xcode')
     implementation project(':pacesoftsdk')
+    implementation project(':xcode')
     //implementation 'com.github.SBale-Pace:PacesoftAndroidSample:0.0.1'
     //implementation 'com.github.ShashankBale:Pacesoft:0.0.1'
+    //implementation 'com.github.ShashankBale:Pacesoft:0.0.4'
 
     //implementation 'com.github.ShashankBale.Chuck:lib-chuck-debug:0.0.2'
 
