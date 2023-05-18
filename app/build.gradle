@@ -87,27 +87,21 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
-
     implementation project(':pacesoftsdk')
     implementation project(':xcode')
-    //implementation 'com.github.SBale-Pace:PacesoftAndroidSample:0.0.1'
-    //implementation 'com.github.ShashankBale:Pacesoft:0.0.1'
-    //implementation 'com.github.ShashankBale:Pacesoft:0.0.4'
-
-    //implementation 'com.github.ShashankBale.Chuck:lib-chuck-debug:0.0.2'
+    //implementation 'com.github.ShashankBale.Pacesoft:pacesoftsdk:0.0.5'
 
     def agnosVersion = '3.5.12'
-
-    debugImplementation("ca.amadis.agnos:agnos-pacesoft-sred-debug:${agnosVersion}") {
+    implementation("ca.amadis.agnos:agnos-pacesoft-sred-debug:${agnosVersion}") {
         exclude group: 'androidx.core', module: 'core'
         exclude group: 'androidx.core', module: 'core-ktx'
         exclude group: 'androidx.localbroadcastmanager', module: 'localbroadcastmanager'
         exclude group: 'androidx.annotation', module: 'annotation-experimental'
     }
-    releaseImplementation("ca.amadis.agnos:agnos-pacesoft-sred-release:${agnosVersion}") {
+    /*releaseImplementation("ca.amadis.agnos:agnos-pacesoft-sred-release:${agnosVersion}") {
         exclude group: 'androidx.core', module: 'core'
         exclude group: 'androidx.core', module: 'core-ktx'
         exclude group: 'androidx.localbroadcastmanager', module: 'localbroadcastmanager'
         exclude group: 'androidx.annotation', module: 'annotation-experimental'
-    }
+    }*/
 }
