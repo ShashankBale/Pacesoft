@@ -20,7 +20,7 @@
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize" />
 
-        <!--<activity
+        <activity
             android:exported="false"
             android:name="com.zimperium.zdetection.service.ZPermissionCheckActivity"
             android:launchMode="singleInstance"
@@ -37,7 +37,7 @@
             <intent-filter>
                 <action android:name="com.zimperium.zips_namonitoraction" />
             </intent-filter>
-        </service> &lt;!&ndash; For KNOX &ndash;&gt;
+        </service> <!-- For KNOX -->
         <receiver
             android:exported="false"
             android:name="com.zimperium.zdetection.knox.KnoxLicenseReceiver"
@@ -45,10 +45,10 @@
             <intent-filter>
                 <action android:name="edm.intent.action.license.status" />
             </intent-filter>
-        </receiver> &lt;!&ndash; App Config for EMM AFW &ndash;&gt;
+        </receiver> <!-- App Config for EMM AFW -->
         <meta-data
             android:name="android.content.APP_RESTRICTIONS"
-            android:resource="@xml/app_restrictions" />-->
+            android:resource="@xml/app_restrictions" />
 
         <!-- Manifest merger failed
         Already present in .aar file
